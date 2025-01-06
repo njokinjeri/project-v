@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --font-size-small: 0.938rem; /*15px*/
+    --font-size-medium: 1.125rem; /*18px*/
+    --font-size-large: 1.313rem; /*21px*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, main {
+    height: 100%;
+    font-family: 'League Spartan';
+    font-size: var(--font-size-small);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-heading {
+    color: var(--very-dark-magenta);
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.hero-text {
+    color: var(--dark-grayish-magenta);
+    margin: 1.25rem;
+    line-height: 1.5rem;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    text-align: center;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.rating-column {
+    height: 10vh;
+    width: 90vw;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.rating-text {
+    color: var(--very-dark-magenta);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+}
+
+.reviews-container {
+    width: 90vw;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-container {
+    padding: 1.5rem;
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.avatar-container {
+    min-height: 16vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.avatar-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+
+}
+
+.verified-text {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    color: var(--soft-pink);
+}
+
+blockquote {
+    color: var(--light-grayish-magenta);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    line-height: 1.5rem;
+    opacity: 0.8;
+}
+
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 80vw;
+        background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, right bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, auto;
+    }
+    .hero-heading {
+        font-size: 3rem;
+        line-height: 2.4rem;
+    }
+    .hero-text {
+        font-size: var(--font-size-medium);
+    }
+    .rating-column {
+        width: 75vw;
+    }
+    .reviews-container {
+        width: 75vw;
+    }
+    blockquote {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--very-dark-magenta);
+    }
+    section {
+        width: 75vw;
+        height: 100%;
+        background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-position: left top, right bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, auto;
+        border-radius: 1.25rem;;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto, auto;
+        place-content: center;
+    }
+
+    .hero-container {
+        grid-row: 1;
+        grid-column: 1/2;
+        margin-top: 6rem;
+        margin-bottom: -4rem;
+    }
+
+    .hero-heading {
+        width: 80%;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+        text-align: justify;
+    }
+    .hero-text {
+        width: 80%;
+        font-size: var(--font-size-medium);
+        line-height: 1.4;
+        text-align: justify;
+        word-spacing: -0.1rem;
+        margin-top: 1.75rem;
+    }
+
+    .ratings {
+        width: 78%;
+        height: 24vh;
+        grid-row: 1;
+        grid-column: 2/3;
+        margin-top: 6rem;
+    }
+
+    .rating-column {
+        width: 28vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .rating-column:nth-child(2) {
+        margin-left: 5rem;
+    }
+
+    .rating-column:nth-child(3) {
+        margin-left: 10rem;
+    }
+
+    .reviews-container {
+        grid-row: 2;
+        grid-column: 1/3;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .avatar-container{
+        min-height: 10vh;
+    }
+
+    .review-container:nth-child(2) {
+        margin-top: 4rem;
+    }
+    
+    .review-container:nth-child(3){
+        margin-top: 8rem;
+    }
+
+    blockquote {
+        font-size: var(--font-size-small);
+    }
+}

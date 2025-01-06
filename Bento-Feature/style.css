@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-background: #F3F4F6;
+    --grey: #6C727F;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+header {
+    margin-top: 2.75rem;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-text {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.header-paragraph {
+    width: 75vw;
+    text-align: center;
+    color: var(--grey);
+    font-size: 0.75rem;
+}
+
+main{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.bento {
+    width: 90vw;
+    padding: 2rem 0;
+    background-color: var(--primary-background);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.bento-grid {
+    width: 75vw;
+    height: 35vh;
+    padding: 0 1.5rem;
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow: 0 3px 2px 2px #d9d9da;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 45vw;
+    display: flex;
+}
+
+.bento-image {
+    width: 100%;
+}
+
+.grid-text {
+    width: 30vw;
+}
+
+.grid-heading {
+    font-size: clamp(0.875rem, 2vw, 2.25rem);
+}
+
+.grid-paragraph {
+    color: var(--grey);
+    font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+    padding-top: 0.625rem;
+}
+
+footer {
+    width: 80vw;
+    height: 20vh;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    font-weight: 500;
+}
+
+.footer-text:hover {
+    color: var(--grey);
+    font-weight: 800;
+}
+
+.my-icon {
+    height: 70px;
+    width: 70px;
+}
+@media (min-width: 1040px) {
+    .header-paragraph {
+        width: 50vw;
+        font-size: clamp( 0.875rem ,0.5vw, 1rem);
+    }
+
+    .bento {
+        width: 75vw;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "card-1 card-1 card-2 card-2"
+        "card-3 card-3 card-3 card-3"
+        "card-4 card-4 card-4 card-4"
+        "card-5 card-5 card-5 card-5"; 
+        place-items: center;
+        gap: 1.25rem;
+        overflow: hidden;
+    }
+
+    .card-1,
+    .card-2 {
+        width: 98%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .card-3,
+    .card-4,
+    .card-5 {
+        width: 70vw;
+        height: 35vh;
+    }
+
+    .card-1 {
+        grid-area: card-1;
+    }
+    .card-2 {
+        grid-area: card-2;
+    }
+    .card-3 {
+        grid-area: card-3;
+    }
+    .card-4 {
+        grid-area: card-4;
+    }
+    .card-5 {
+        grid-area: card-5;
+    }
+
+   .image-container {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+   .image-1,
+   .image-2 {
+    width: 55%;
+}
+
+   .image-3,
+   .image-4,
+   .image-5 {
+    width: 85%;
+   }
+
+    .grid-heading {
+        font-size: clamp(0.95rem, 2vw, 1rem);
+}
+
+    .grid-paragraph {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1240px) {
+    .header-paragraph {
+        width: 40vw;
+    }
+
+    .bento {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "card-1 card-1 card-2 card-2 card-3 card-3"
+        "card-4 card-4 card-4 card-5 card-5 card-5" ;
+        place-items: center;
+        gap: 1.25rem;
+    }
+
+    .bento-grid {
+        width: 75vw;
+    }
+
+    .card-1 {
+        grid-area: card-1;
+    }
+    .card-2 {
+        grid-area: card-2;
+    }
+    .card-3 {
+        grid-area: card-3;
+    }
+    .card-4 {
+        grid-area: card-4;
+    }
+    .card-5 {
+        grid-area: card-5;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        width: 24vw;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .image-container {
+        width: 20vw;
+    }
+
+    .image-3,
+    .image-4,
+    .image-5 {
+        width: 60%;
+    }
+
+    .card-4,
+    .card-5 {
+        width: 36.75vw;
+        height: 25vh;
+    }
+
+    .grid-text {
+        width: 20vw;
+    }
+
+    .grid-heading {
+        font-size: 0.875rem;
+    }
+
+    .grid-paragraph {
+        font-size: 0.75rem;
+    }
+}

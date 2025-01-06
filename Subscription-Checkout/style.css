@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap');
+
+:root {
+    /* color palette */
+    --deep-blue: #121826;
+    --slate-gray: #6C727F;
+    --stone-gray: #D2D5DA;
+    --royal-purple: #743EE4;
+    --lavender-mist: #ECE9FC;
+    --white: #FFFFFF;
+    --cool-gray: #F0F3F6;
+
+    /* font sizes */
+    --font-size-small: 0.75rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 1.25rem;;
+    font-family: 'Be Vietnam Pro';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+article {
+    width: 92vw;
+    height: 70vh;
+    border-radius: 0.75rem;
+    position: relative;
+    background-color: var(--cool-gray);
+}
+
+.article-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.125rem;
+    cursor: pointer;
+}
+
+h2 {
+    color: var(--slate-gray);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+}
+
+.payment-plan {
+    width: 85vw;
+    height: 9vh;
+    border-radius: 0.75rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--white);
+}
+
+.custom-radio {
+    height: 1.35rem;
+    width: 1.35rem;
+    accent-color: var(--royal-purple);
+}
+
+.payment-plan:has([type="radio"]:checked)  {
+    border: 1px solid var(--royal-purple);
+    background-color: var(--lavender-mist);
+}
+
+
+.payment-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.payment-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.payment-text p {
+    color: var(--slate-gray);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+hr {
+    margin: 1rem 0;
+    width: 85vw;
+    border: 1px solid var(--stone-gray);
+}
+
+.total {
+    width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--deep-blue);
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.disclaimer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.disclaimer-text {
+    font-size: 0.745rem;
+    font-weight: 200;
+    color: var(--deep-blue);
+}
+
+.bg-image {
+    width: 32rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom-right-radius: 0.75rem;
+}
+
+section {
+    width: 95vw;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.neuralite-logo {
+    width: 8rem;
+}
+
+.upgrade-heading {
+    font-size: var(--font-size-large);
+}
+
+.upgrade-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--slate-gray);
+    padding-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.25rem;
+    overflow-x: hidden;
+}
+
+label {
+    color: var(--slate-gray);
+    font-weight: 600;
+    font-size: 0.89rem;
+}
+
+.name-bar,
+.email-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.bill-form input {
+    width: 90vw;
+    height: 7.5vh;
+    padding-left: 1.2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--stone-gray);
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+    outline: none;
+}
+
+.bill-form input::placeholder {
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+    color: var(--slate-gray);
+}
+
+.name-bar input:focus,
+.email-bar input:focus,
+.postal-section input:focus,
+.country-section select:focus {
+    border: 2px solid var(--royal-purple);
+}
+
+.payment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.payment-options {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.payment-option {
+    width: 28vw;
+    height: 9vh;
+    padding-left: 1.25rem;
+    border: 1px solid var(--stone-gray);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.payment-option.selected {
+    border: 1px solid var(--royal-purple);
+    background-color: var(--lavender-mist);
+}
+
+.form-actions {
+    width: 90vw;
+    padding-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.address-bar {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.country-section,
+.postal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.postal-section input{
+    width: 43vw;
+}
+
+.country-section select { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 43vw;
+    height: 7.5vh;
+    padding-left: 1.2rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--stone-gray);
+    font-size: var(--font-size-medium);
+    background-color: var(--white);
+    outline: none;
+}
+
+.country-section select option:hover {
+    background-color: slategray;
+}
+
+.country-section::after {
+    content: "\2304";
+    position: absolute;
+    right: 20px;
+    top: 42%;
+    color: var(--slate-gray);
+    font-size: 1.75rem;
+    font-weight: 500;
+    pointer-events: none;   
+}
+
+#cancel-action {
+    width: 22vw;
+    background-color: var(--lavender-mist);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+}
+
+#subscribe-action {
+    width: 65vw;
+    background-color: var(--royal-purple);
+    color: var(--white);
+    font-size: var(--font-size-medium);
+    font-weight: 600;
+}
+
+#cancel-action:hover {
+    border: 1px solid var(--royal-purple);
+}
+
+#subscribe-action:hover {
+    border: 1px solid var(--royal-purple);
+    background-color: var(--lavender-mist);
+    color: var(--royal-purple);
+}
+
+@media (min-width: 1025px) {
+    main {
+        min-height: 100vh;
+        width: 85vw;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        overflow-x: hidden;
+    }
+
+    article {
+        width: 35vw;
+        height: 75vh;
+    }
+
+    .payment-plan {
+        width: 30vw;
+    }
+
+    hr {
+        width: 30vw;
+    }
+
+    .total {
+        width: 30vw;
+    }
+
+    section {
+        width: 40vw;
+    }
+
+    .upgrade-text {
+        width: 40vw;
+        padding: 0;
+    }
+
+    .bill-form {
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .bill-form input {
+        width: 40vw;
+        height: 6.25vh
+    }
+
+    .payment-options {
+        width: 40vw;
+        gap: 1rem;
+    }
+
+    .payment-option {
+        height: 8vh;
+    }
+
+    .payment-option p {
+        font-size: 0.875rem;
+    }
+
+    .form-actions {
+        width: 40vw;
+        height: 6.25vh;
+        gap: 1rem;
+    }
+
+    .address-bar {
+        width: 40vw;
+    }
+
+    .postal-section input {
+        width: 18vw;
+    }
+
+    .country-section select {
+        width: 18vw;
+        height: 6.25vh;
+    }    
+}

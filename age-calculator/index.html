@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type=" text/css" href="style.css">
+    <link rel="icon" type="image/png" href="/icons/bug.png">
+  <title>Age Calculator</title>
+</head>
+<body>
+  <main>
+    <section>
+      <form>
+        <div class="form-entry-container">
+          <div class="entry-column">
+            <label for="birth_day">DAY</label>
+            <input type="number" id="birth_day" name="birth_day" placeholder="DD" required>
+            <small id="error-input-day"></small>
+          </div>
+          <div class="entry-column">
+            <label for="birth_month">MONTH</label>
+            <input type="number" id="birth_day" name="birth_month" placeholder="MM" required>
+            <small id="error-input-month"></small>
+          </div>
+          <div class="entry-column">
+            <label for="birth_year">YEAR</label>
+            <input type="number" id="birth_year" name="birth_year" placeholder="YYYY" required>
+            <small id="error-input-year"></small>
+          </div>
+        </div>
+        <div class="cta">
+          <hr>
+          <button><img class="btn-icon" src="./assets/images/icon-arrow.svg" alt="arrow-icon"></button>
+        </div>
+      </form>
+      <div class="form-result-container">
+        <div class="entry-display" id="years-display"><span id="blinking-effect">__</span> years</div>
+        <div class="entry-display" id="months-display"><span id="blinking-effect">__</span> months</div>
+        <div class="entry-display" id="days-display"><span id="blinking-effect">__</span> days</div>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="./icons/bug.png">
+    <title>Contact Form</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-container">
+            <img class="contact-logo" src="./assets/contact-form-icon.svg" alt="contact-form-Logo">
+        </a>
+        <div class="header-text">
+            <h1>Interested in our <br>
+                business pricing?
+             </h1>
+            <p>
+               Fill out the form to view details and we’ll <br>
+               contact you as soon as possible.
+            </p>
+        </div>
+    </header>
+    <section>
+        <form class="contact-form">
+            <div class="form-data">
+                <div class="form-details">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="fullName" placeholder="Ethan Johnson" required />
+                </div>
+                <div class="form-details">
+                    <label for="companyEmail">Company Email</label>
+                    <input type="email" name="companyEmail" placeholder="ethan@johnson.com" required />
+                </div>
+            </div>
+            <div class="options-container">
+                <div class="form-details">
+                    <label for="companySize">Company Size</label>
+                    <div class="custom-select">
+                        <select name="companySize" required>
+                            <option value="" disabled selected>Select company size</option>
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51-200">51-200 employees</option>
+                            <option value="201-500">201-500 employees</option>
+                            <option value="500+">500+ employees</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-details">
+                    <label for="subject">Subject</label>
+                    <div class="custom-select">
+                        <select name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="landing-page">Landing Page Development</option>
+                            <option value="website-redesign">Website Redesign</option>
+                            <option value="ecommerce-solutions">E-commerce Solutions</option>
+                            <option value="custom-app">Custom Web Application</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-details">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="25" rows="5" placeholder="Briefly describe your project needs..."></textarea>
+           </div>
+            <div class="form-details cta">
+                <input type="submit" value="Contact Sales" required />
+            </div>
+        </form>
+    </section>
+    <footer>
+        <img class="my-icon" src="./assets/dragonfly.svg" alt="dragon-fly">
+        <p>Made with curiosity</p>
+    </footer>
+</body>
+</html>

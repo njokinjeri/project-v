@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/icon" href="/icons/bug.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Interactive rating component</title>
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="Logo" class="Logo">
+  </header>
+  <main>
+    <section>
+      <div class="info-container">
+        <h1>We are launching <b class="emphasis-text">soon!</b></h1>
+        <p>Subscribe and get notified</p>
+        <form action="" id="emailForm" onsubmit="return handleSubmit(event)">
+          <div class="form-container">
+            <label for="email"></label>
+            <div class="input-container">
+              <input 
+              type="email"
+              id="emailInput"
+              name="email"
+              placeholder="Your email address"
+              oninput="validateEmailInput(event)"
+              required
+            />
+               <span id="emailFeedback" class="error-container"></span>
+            </div>
+            <button type="submit" class="submit-btn">Notify Me</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section>
+      <img src="./images/illustration-dashboard.png" alt="dashboard illustration" class="dashboard-container">
+    </section>
+
+    <!-- Modal feature-->
+    <section>
+      <dialog id="emailModal">
+        <div class="email-dialog">
+          <img src="./images/rocket.svg" alt="rocket-launch-icon" class="launch-icon">
+          <p id="confirmationMessage" class="launch-message1">
+            "Thank you for subscribing!</p>
+          <p class="launch-message2">
+            We'll keep you posted as soon as we are live. <br>
+            Stay tuned for exciting news!
+          </p>
+          <button id="closeModalButton" class="modal-button">Close</button>
+        </div>
+      </dialog>
+    </section>
+  </main> 
+  <footer>
+    <div class="socials-container">
+      <a href="#" class="social-icon">
+        <i class="fa-brands fa-facebook-f" style="color: hsl(223, 87%, 63%);"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fa-brands fa-instagram" style="color: hsl(223, 87%, 63%);"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fa-brands fa-x-twitter" style="color: hsl(223, 87%, 63%);"></i>
+      </a>
+    </div>
+    <small>&copy; Copyright Ping. All rights reserved.</small>
+  </footer>
+  <script src="index.js" defer></script>
+</body>
+</html>
+

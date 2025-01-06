@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/*base styles*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    box-sizing: border-box;
+    overflow: scroll; 
+    cursor: pointer;   
+}
+
+/* header*/
+
+header {
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lora", serif;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.fa-solid { 
+    padding: 15px;
+    font-size: 40px;;
+    color: mediumslateblue;
+}
+
+#caret-down {
+    display: none;
+}
+
+.popup-content {
+    max-width: 30%;
+    right: 5%;
+    top: 90%;
+    padding: 10px;
+    position: absolute;
+    display: none; 
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.63);
+    box-shadow: 6px 8px mediumslateblue;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px outset rgb(90, 8, 90);
+}
+
+
+/* main content*/
+main {
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.issue-content {
+    margin: 80px;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.issue-image {
+    max-width: 60%;
+    height: auto;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+/* 3D button effect */
+
+.btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      to left,
+      hsl(268, 100%, 16%) 0%,
+      hsl(180, 100%, 32%) 8%,
+      hsl(300, 100%, 32%) 92%,
+      hsl(155, 100%, 16%) 100%
+    );
+  }
+
+  .front {
+    display: block;
+    position: relative;
+    padding: 10px 28px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+
+  .btn-1 {
+    background: hsl(0, 94%, 54%);
+  }
+
+  .btn-2 {
+    background: hsl(229, 91%, 41%);
+  }
+
+  .btn-3 {
+    background: hsl(44, 93%, 49%);
+  }
+
+  .btn-4 {
+    background: hsl(22, 89%, 55%);
+  }
+
+  .btn-5 {
+    background: #0bbabd;
+  }
+
+  .btn-6 {
+    background: hsl(308, 61%, 58%);
+  }
+
+  .btn-7 {
+    background: #ec3a93;
+  }
+
+  .btn-8 {
+    background: #e7ce83;
+  }
+
+  .btn:hover {
+    filter: brightness(110%);
+  }
+
+  .btn:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .btn:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+
+  .btn:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .btn:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+
+  .btn:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+/*button {
+    padding: 5px 15px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    border-style: solid;
+    border-color:  mediumslateblue;
+    cursor: pointer;
+}
+    */
+
+/* footer*/
+footer {
+    color: rgb(126, 10, 126);
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+footer:hover {
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+}

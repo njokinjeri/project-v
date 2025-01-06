@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --sub-heading-text: hsl(276, 100%, 81%);
+    --chat-left-text: hsl(276, 55%, 52%);
+    --chat-right-text: hsl(271, 15%, 43%);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --paragraph-text: hsl(270, 7%, 64%);
+    --main-heading: hsl(271, 36%, 24%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-btn-background:hsl(271, 36%, 24%);
+    --radio-btn-outline: hsl(289, 100%, 72%);
+    --white: hsl(0, 0%, 100%);
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+
+}

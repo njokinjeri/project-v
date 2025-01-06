@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Random Quote Generator</title>
+    <link rel="icon" type="image/png" href="/icons/bug.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="page-header">
+        <a class="source-code" href="" target="_blank">&#60;&#8725;&#62;</a>
+    </header>
+    <main>
+        <section class="quote-container">
+            <!-- Author to be displayed here-->
+            <span class="author" id="author"></span>
+
+            <!-- category change to be displayed here-->
+            <div class="category-row">
+                <span>Famous Quotes</span>
+                <span id="category"></span>
+            </div> 
+            <!-- Quote to be displayed here -->
+             <blockquote>
+              <span class="quote" id="quote"></span>
+             </blockquote>
+        </section>
+        <section class="generate-container">
+            <div class="icons-set">
+              <div class="tooltip copy">
+                <span class="tooltiptext" id="copyToolKit">Copy to clipboard</span>
+                <i class="fa-solid fa-copy fa-lg"></i>
+              </div>
+            </div>
+            <button type="button" class="generate-button">Generate Quote</button>
+        </section>
+    </main>
+    <footer>
+        <img class="my-icon" src="./assets/dragon-fly.svg" alt="dragon-fly">
+        <p>Made with curiosity</p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --midnight-navy: #121826;
+    --cool-slate: #9DA3AE;
+    --soft-snow: #F9FAFB;
+    --lavender: #845EEE;
+    --light-mist: #D2D5DA;
+    --frosted-silver: #F3F4F6;
+    --font-size-sm: 0.825rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.25rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 1.75rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.25rem;
+}
+
+figure {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.product-image {
+    border-radius: 0.5rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.breadcrumb-list {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+}
+
+.breadcrumb-list li {
+    color: var(--lavender);
+    font-size: var(--font-size-sm);
+}
+
+.breadcrumb-list li a {
+    text-decoration: none;
+    color: var(--midnight-navy);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+ul.breadcrumb-list li+li::before {
+    padding: 0.25rem;
+    content: "\2013"
+}
+
+.breadcrumb-list li a:hover {
+    color: var(--lavender);
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.product-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.highlights-title {
+    color: var(--midnight-navy);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+}
+
+.highlights-list {
+    padding: 0 2.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.highlights-list li {
+    color: var(--midnight-navy);
+    padding: 0.25rem;
+}
+
+.product-info {
+    width: 23rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--frosted-silver);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.tag {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h5 {
+    color: var(--cool-slate);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.product-text {
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.product-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    width: 8.5rem;
+    height: 2.25rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--lavender) ;
+    background-color: var(--lavender);
+    color: var(--frosted-silver);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: var(--frosted-silver);
+    color: var(--lavender);
+}
+
+.btn-secondary {
+    width: 11.5rem;
+    height: 2.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--light-mist);
+    background-color: var(--soft-snow);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+}
+
+.empty-heart {
+    display: inline;
+}
+.filled-heart {
+    display: none;
+}
+
+.btn-secondary:hover .empty-heart {
+    display: none;
+}
+.btn-secondary:hover .filled-heart {
+    display: inline;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        width: 85vw;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+   
+
+    section {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 1025px) {
+
+}

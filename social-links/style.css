@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+/* Base styles for the document*/
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);
+    --Off-Black: hsl(0, 0%, 8%);
+    --font-size-small: 0.75rem;
+    --font-size-medium: 0.875rem;
+    --font-size-large: 1rem;
+}
+
+/* Body styling*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Lora", serif;
+    background-color: var(--Off-Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* page header styling*/
+.page-header {
+    height: 10vh;
+    display: flex;
+    font-size: var(--font-size-large);
+    text-align: center;
+}
+
+.source-code {
+    text-decoration: none;
+    color: var(--Grey);
+    align-self: flex-end;
+}
+
+/* main element styling*/
+
+main {
+    padding: 2rem;
+    margin: 1rem;
+    height: 80vh;
+    background-color: var(--Dark-Grey);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.938rem;
+}
+
+/*sections styling*/
+/* main-container*/
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-header h1 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: var(--font-size-large);
+    color: var(--green);
+}
+
+.profile-header p{
+    margin-top: 2rem;
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+}
+
+.avatar {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+    margin: 0.625rem;
+}
+/*social-links*/
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.links-btn {
+    padding: 0.875rem 2rem;
+    width: 60vw;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--Grey);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    border-radius: 0.875rem;
+}
+
+.links-btn:hover {
+    background-color: var(--green);
+    color: var(--Off-Black);
+}
+
+/* footer styles*/
+footer {
+    height: 10vh;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    font-weight: 500;
+    color: var(--white);
+    font-size: var(--font-size-large);
+}
+
+footer p{
+    font-style: italic;
+    color: var(--Grey);
+}
+
+footer p:hover {
+    color: var(--green);
+}
+
+.my-icon {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+/* Base styles for tables & desktop*/
+@media screen and (min-width: 960px) {
+    main {
+        width: 30vw;
+    }
+    .links-btn{
+        width: 20vw;
+    }
+}

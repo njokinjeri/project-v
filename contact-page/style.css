@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: #4036A9;
+    --black: #111729;
+    --light-blue: #CDD5E0;
+    --smoky-white: #F8FAFC;
+    --white: #FFFFFF;
+    --font-size-large: 4rem;
+    --font-size-medium: 2rem;
+    --font-size-medium-small: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-button: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Be Vietnam Pro", serif;
+    background-image: url(./assets/bg-image.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    color: var(--white);
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container  {
+    padding: 1.5rem 1.25rem;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.contact-logo {
+    width: 5rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 0.625rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.125rem;
+}
+
+p {
+    text-align: center;
+    color: var(--smoky-white);
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.9
+}
+
+section {
+    position: relative;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+section::before {
+    content: "";
+    background-color: var(--light-blue);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    border-radius: 1.125rem;
+}
+
+.contact-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.45rem;
+}
+
+.form-details {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.75rem;
+    color: var(--smoky-white);
+    font-weight: 400;
+    padding: 0.45rem 0;
+}
+
+input,
+select {
+    height: 3rem;
+    border-radius: 0.75rem;
+    border-style: none;
+    padding-left: 0.875rem;
+    outline: none;
+}
+
+.form-details input:focus {
+    border-bottom: solid 3px #b514ffd3;
+    animation: color-change 2s linear infinite;
+}
+
+input::placeholder {
+    color: var(--light-blue);
+    font-size: var(--font-size-small);
+    font-weight: 900;
+}
+
+.form-details input[type="submit"] {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: var(--font-size-medium-small);
+}
+
+.form-details input[type="submit"]:hover {
+    color: var(--white);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-color: var(--white);
+    width: 100%;
+    outline: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+select option {
+    font-size: var(--font-size-small);
+    background-color: white;
+}
+
+option:hover {
+    background-color: var(--light-blue);
+}
+
+.custom-select {
+    position: relative;
+    display: flex;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: 0.75rem;
+ }
+
+ .custom-select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--blue);
+    padding: 0 0.975rem;
+    cursor: pointer;
+    pointer-events: none;
+    transition:.25s all ease;
+ }
+ .custom-select:hover::after {
+    color: #b514ffd3;
+ }
+
+textarea {
+    height: 10rem;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem;
+    border-radius: 0.75rem;
+    outline: none;
+}
+
+.form-details textarea:focus,
+.form-details select:focus {
+    border-bottom: solid 3px #b514ffd3;
+    animation: color-change 2s linear infinite;
+}
+
+footer {
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    font-weight: 500;
+    font-size: var(--font-size-small);
+}
+
+footer p{
+    color: var(--light-blue);
+}
+
+footer p:hover {
+    color: var(--white);
+}
+
+.my-icon {
+    height: 70px;
+    width: 70px;
+}
+
+@keyframes color-change {
+    0%,100%{
+      border-color:#b514ffd3;
+    }
+  
+    25%{
+      border-color:#921fdf;
+    }
+    
+    50%{
+      border-color:#0091EA;
+    }
+    
+    75%{
+      border-color:#d300b0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    h1 {
+        text-align: center;
+        font-size: 2.875rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        width: 75vw;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-data,
+    .options-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .form-details input,
+    .form-details .custom-select {
+        width: 35vw;
+    }
+
+    .cta input {
+        width: 100%;
+    }
+
+  }
+
+  @media (min-width: 1280px) {
+    section {
+        width: 60vw;
+    }
+
+    .form-details input,
+    .form-details .custom-select {
+        width: 28vw;
+    }
+
+    .cta input {
+        width: 100%;
+    }
+
+  }

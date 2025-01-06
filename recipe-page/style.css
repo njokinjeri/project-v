@@ -1,0 +1,222 @@
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+  /*
+      font-family: 'Outfit', sans-serif;
+      font-family: 'Young Serif', serif; */
+
+  body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: hsl(30, 54%, 90%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: hsl(24, 5%, 18%);
+      font-family: 'Outfit', sans-serif;
+
+
+  }
+
+  .container {
+      max-width: 620px;
+      width: 90%;
+      margin: 0 auto;
+      height: auto;
+      background: hsl(0, 0%, 100%);
+      border-radius: 15px;
+      overflow: hidden;
+
+  }
+
+  /*header*/
+
+  header {
+      padding: 20px;
+      text-align: start;
+  }
+
+  header h1 {
+      font-family: 'Young Serif', serif;
+  }
+
+  header p {
+      color: hsl(24, 5%, 18%);
+  }
+
+  img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+
+  }
+
+  section {
+      padding: 8px;
+  }
+
+  section h2 {
+      color: hsl(14, 45%, 36%);
+      font-family: 'Young Serif', serif;
+      font-size: 24px;
+      font-weight: 200;
+
+  }
+
+  .preparation-time {
+      width: 90%;
+      height: auto;
+      max-width: 550px;
+      margin: 10px 30px;
+      border-radius: 10px;
+      background: rgb(250, 243, 250);
+      display: flex;
+      flex-direction: column;
+  }
+
+  .preparation-time h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: hsl(332, 51%, 32%);
+      margin-top: 5px;
+  }
+
+  .preparation-time ul {
+      margin-top: 5px;
+      margin-left: -20px;
+      color: hsl(24, 5%, 18%);
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+  }
+
+  .preparation-time ul li {
+      padding-left: 20px;
+      list-style-type: "•";
+      line-height: 25px;
+  }
+
+  .preparation-time li::marker {
+      color: hsl(332, 51%, 32%);
+  }
+
+
+  .ingredients ul {
+      margin-left: -20px;
+      margin-top: 5px;
+      list-style-type: "•";
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+  }
+
+  .ingredients ul li {
+      line-height: 30px;
+      padding-left: 20px;
+  }
+
+  .ingredients li:last-child {
+      border-bottom: 1px solid hsl(0, 2%, 74%);
+      padding-bottom: 30px;
+  }
+
+  .ingredients li::marker {
+      color: hsl(14, 45%, 36%);
+  }
+
+  .instructions ol {
+      margin-left: -20px;
+      margin-top: 5px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+  }
+
+  .instructions ol li {
+      line-height: 25px;
+      padding-left: 20px;
+  }
+
+  .instructions li:last-child {
+      border-bottom: 1px solid hsl(0, 2%, 74%);
+      padding-bottom: 30px;
+      margin: 0 auto;
+  }
+
+  .instructions li::marker {
+      color: hsl(14, 45%, 36%);
+  }
+
+  .nutrition {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+  }
+
+  .nutrition table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      width: 100%;
+  }
+
+  .nutrition table td {
+      padding: 10px;
+  }
+
+  .nutrition td strong {
+      color: hsl(14, 45%, 36%);
+      line-height: 30px;
+  }
+
+  .nutrition table tr:not(:last-child) td {
+      border-bottom: 1px solid hsl(0, 2%, 74%);
+      padding-bottom: 10px;
+      padding-left: 30px;
+
+  }
+
+  .nutrition table tr:last-child td {
+      border-bottom: none;
+      padding-bottom: 20px;
+      padding-left: 30px;
+  }
+
+
+  /* footer */
+  footer {
+      font-family: 'Young Serif', serif;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  footer a {
+      color: hsl(332, 51%, 32%);
+  }
+
+  /* Responsive style features*/
+
+  /* Mobile Styles - Mobile: 375px*/
+  @media screen and (max-width:375px) {
+
+      .container {
+          width: 100%;
+          margin: 10px 10px;
+      }
+
+      header {
+          padding: 0;
+      }
+
+      header img {
+          border-radius: 0;
+      }
+
+      section {
+          padding: 4px;
+      }
+
+      .preparation-time,
+      .ingredients,
+      .instructions,
+      .nutrition {
+          width: 80%;
+      }
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="/icons/bug.png">
+  <title>Card Component</title>
+</head>
+<body>
+  <aside> 
+  </aside>
+  <main>
+    <form>
+      <label for="cname">CARDHOLDER NAME</label>
+      <input type="text" id="cname" name="cardholder-name" placeholder="e.g. Jane Appleseed" required>
+      <label for="cnumber">CARD NUMBER</label>
+      <input type="text" id="cnumber" name="cardholder-number" placeholder="e.g. 1234 5678 9123 0000" required>
+      <div class="card-details">
+        <div class="expiration-container">
+          <label for="exp-details">Exp. Date (MM/YY)</label>
+          <input type="text" id="exp-month" name="exp-month" placeholder="MM" maxlength="2" required>
+          <input type="text" id="exp-year" name="exp-year" placeholder="YY" maxlength="2" required>
+        </div>
+        <div class="cvc-container">
+          <label for="cvc-details">CVC</label>
+          <input type="text" id="cvc-details" name="cvc-details" placeholder="e.g. 123" maxlength="3" required>
+        </div>
+      </div>
+      <div class="confirm-container">
+        <input type="submit" value="Confirm">
+      </div>
+    </form>
+  </main>
+</body>
+</html>
