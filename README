@@ -1,0 +1,64 @@
+# Project Vanilla: Back to Basics
+This repository showcases a collection of **frontend development projects** built solely using **plain JavaScript**, **CSS**, and **semantic HTML**. It serves as a testament to my commitment to mastering the core web development technologies—without relying on frameworks, preprocessors, or external libraries.
+
+Each project is sourced from platforms like [**Frontend Mentor**](https://www.frontendmentor.io/home) and [**Dev Challenges**](https://devchallenges.io/dashboard), providing real-world UI/UX challenges designed to sharpen my skills in crafting fully responsive, accessible, and maintainable web applications.
+## Featured Projects
+
+Here’s a list of the projects available in this repository for practicing your skills:
+
+| Projects                                         |
+| ------------------------------------------------ |
+| 1. Bookmark Landing Page                         |
+| 2. Flyo Landing Page                             |
+| 3. Maker Landing Page                            |
+| 4. Huddle Landing Page                           |
+| 5. Arch Studio multi-site                        |
+| 6. Photosnap multipage-site                      |
+| 7. Hufie homepage                                |
+| 8. Alarado homepage                              |
+| 9. Memory Game                                   |
+| 10. Tic Tac Toe Game                             |
+| 11. Connect four Game                            |  
+| 12. Hangman Game                                 |
+| 13. Tips Calculator                              |
+| 14. Age Calculator                               |
+| 15. Calculator App                               |
+| 16. IP Address Tracker                           |
+| 17. Random Quote Generator                       |
+| 18. Pomodoro App                                 |
+| 19. Password Generator                           |
+| 20. Pricing Component                            |
+| 21. Article listing Component                    | 
+| 22. Pricing Table Component                            |
+| 23. E-commerce product Page                      |
+| 24. Clock App                                    |
+| 25. Feature Section                              |
+| 26. Subscription Checkout                        |
+| 27. Newsletter Component                         |
+| 28. Interactive Card Component                   |
+| 29. Backstage talks site                         |
+| 30. Chat App CSS Illustration                    |
+| 31. Contact Form                                 |
+| 32. Bento Component                              |
+| 33. CSS Chat Component                           |
+| 34. Flyo Data Storage Component                  |
+| 35. Social Proof Section                         |
+| 36. Four Card Feature Section                    |
+| 37. Ping Single Column                           |
+| 38. Testimonial component                        |
+| 39. Recipe Page                                  |
+| 40. Social Links Profile                         |
+| 41. Interactive Pricing slider                   |
+
+
+
+## Core Technologies
+
+- **HTML5**: For creating structured, accessible, and semantic markup.
+- **CSS3**: To design responsive layouts, animations, and custom styling.
+- **Vanilla JavaScript**: Implementing dynamic functionality without external libraries or frameworks.
+
+
+## Resources
+1.  [**Frontend Mentor**](https://www.frontendmentor.io/home) 
+2.  [**Dev Challenges**](https://devchallenges.io/dashboard), 
