@@ -11,27 +11,35 @@
 <body>
     <header>
         <img class="alarado-image" src="./assets/alarado-icon-homepage.svg" alt="alarado-logo">
-        <nav class="alarado-nav">
-            <ul class="alarado-list">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Resource</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="dark-mode-feature">
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menuCheckbox">
+            <label for="menuCheckbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="alarado-nav">
+                <ul class="alarado-list">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="dark-mode-feature">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+            </nav>
         </div>
     </header>
     <main>
         <section class="hero-content">
-            <p class="hero-text1">😎 Simple way to communicate</p>
+            <p class="hero-text1">😎 SIMPLE WAY TO COMMUNICATE</p>
             <h1>Actions for Accessibility in Design</h1>
             <p class="hero-text2">The fastest way to build and deploy websites with reusable components.</p>
             <div class="hero-cta">
-                <a href="#">GET STARTED</a>
-                <a href="#">Get live demo</a>
+                <a class="cta-started-btn" href="#">GET STARTED</a>
+                <a class="cta-demo-link" href="#">Get live demo</a>
             </div>
             <div class="cta-highlights">
                 <p><img class="cta-image" src="./assets/Done_ring_round_fill.svg" alt="done-ring-icon"> No credit card required</p>
