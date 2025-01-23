@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +10,28 @@
 </head>
 <body>
     <header>
-        <img class="alarado-image" src="./assets/alarado-icon-homepage.svg" alt="alarado-logo">
+        <div class="alarado-logo"></div>
         <div class="hamburger-menu">
-            <input type="checkbox" id="menuCheckbox">
-            <label for="menuCheckbox">
+            <input type="checkbox" id="menuCheckbox" class="hamburger-feature">
+            <label for="menuCheckbox" class="hamburger-label">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
             <nav class="alarado-nav">
                 <ul class="alarado-list">
-                    <li><a href="#">About us</a></li>
+                    <li class="focused-list"><a href="#">About us</a></li>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Resource</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div class="dark-mode-feature">
-                    <i class="fa-solid fa-moon"></i>
-                    <i class="fa-solid fa-sun"></i>
+                    <input type="checkbox" class="mode-switcher" id="modeToggle">
+                    <label for="modeToggle" class="mode-toggle-label">
+                      <i class="fa-solid fa-moon"></i>
+                      <i class="fa-solid fa-sun"></i>
+                      <span class="ball"></span>
+                    </label>
                 </div>
             </nav>
         </div>
@@ -50,5 +54,6 @@
             <img class="feature-hero" src="./assets/hero-image-simple-homepage.png" alt="alarado-image">
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>

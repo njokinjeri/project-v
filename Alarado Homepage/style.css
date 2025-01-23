@@ -17,7 +17,7 @@
 }
 
 body {
-    padding: 0 1.25rem;
+    padding: 2rem 1.25rem;
     font-family: "Poppins", sans-serif;
     background-color: var(--smoky-white);
     width: 100vw;
@@ -26,6 +26,35 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    overflow-x: hidden;
+}
+
+/* dark-mode*/
+body.dark {
+    background-color: var(--midnight-blue);
+    color: var(--white);
+}
+
+body.dark header .alarado-logo {
+    background-image: url(./assets/alarado-icon-homepage-dark.svg);
+}
+
+body.dark .hamburger-menu  {
+    background-color: var(--black);
+}
+
+body.dark .hamburger-menu span  {
+    background-color: var(--white);
+}
+
+body.dark .hamburger-menu .alarado-nav {
+    background-color: var(--black);
+}
+
+body.dark .hero-content p,
+body.dark .hero-content h1,
+body.dark .cta-demo-link {
+    color: var(--white);
 }
 
 header {
@@ -36,6 +65,14 @@ header {
     align-items: center;
 }
 
+.alarado-logo {
+    width: 10rem;
+    height: 10vh;
+    background-image: url(./assets/alarado-icon-homepage.svg);
+    background-repeat: no-repeat;
+    background-position: 10%;
+}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -43,10 +80,11 @@ header {
     align-items: center;
     gap: 1.75rem;
     background-color: var(--white);
-    position: relative;
+    position: fixed;
+    right: 2rem;
     cursor: pointer;
-
 }
+
 /*hamburger menu for mobile*/
 
 #menuCheckbox {
@@ -65,23 +103,22 @@ header {
     margin-bottom: 0.225rem;
     position: relative;
     background-color: var(--midnight-blue);
-    border-radius: 0.25rem;
+    border-radius: 1rem;
     z-index: 1;
     transform-origin: center;
     transition: transform 0.4s ease-in-out;
-    cursor: pointer;
 }
 
-input:checked ~ label span:first-of-type {
+.hamburger-feature:checked ~ label span:first-of-type {
     transform: rotate(45deg) translate(4.7px, 5px);
 }
 
-input:checked ~ label span:nth-of-type(2) {
+.hamburger-feature:checked ~ label span:nth-of-type(2) {
     opacity: 0;
     transform: scale(0);
 }
 
-input:checked ~ label span:last-of-type {
+.hamburger-feature:checked ~ label span:last-of-type {
     transform: rotate(-45deg) translate(4.7px, -5px);
 }
 
@@ -105,28 +142,51 @@ input:checked ~ label span:last-of-type {
     transition: transform 0.5s ease-in-out, opacity 0.3s ease;
 }
 
-input:checked  ~ nav {
+.hamburger-feature:checked ~ nav {
     transform: translateX(0);
     opacity: 1;
     pointer-events: all;
 } 
 
-.dark-mode-feature {
+/* dark-mode*/
+
+.mode-switcher {
+    opacity: 0;
+    position: absolute;
+}
+
+.mode-toggle-label {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 3.25rem;
+    position: relative;
+    background-color: var(--black);
+    width: 2.875rem;
     height: 1.35rem;
-    background-color: var(--midnight-blue);
     border-radius: 2rem;
+    padding: 0.313rem;
+    cursor: pointer;
 }
 
 .fa-solid {
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: var(--blue);
 }
+
+.mode-toggle-label .ball {
+    position: absolute;
+    top: 0.063rem;
+    left: 0.188rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--smoky-white);
+    transition: transform 0.2s linear;
+}
+
+.mode-switcher:checked + .mode-toggle-label > .ball {
+    transform: translate(1.25rem);
+}
+
 
 nav ul {
     display: flex;
@@ -152,7 +212,12 @@ ul li a:hover {
     text-decoration-thickness: 0.125rem;
 }
 
-/* dark-mode*/
+.focused-list a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 0.313rem;
+    text-decoration-thickness: 0.125rem;
+}
 
 main {
     display: flex;
@@ -176,7 +241,7 @@ main {
 
 .hero-content h1 {
     width: 70vw;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--black);
 }
 
@@ -187,7 +252,7 @@ main {
 }
 
 .hero-cta {
-    width: 60vw;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -235,6 +300,7 @@ main {
     width: 75vw;
     display: flex;
     margin: auto;
+    padding: 2rem 0;
 }
 
 .feature-hero {
