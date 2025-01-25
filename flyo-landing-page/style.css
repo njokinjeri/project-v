@@ -5,8 +5,8 @@
     --main-background: hsl(218, 28%, 13%);
     --footer-background: hsl(216, 53%, 9%);
     --testimonials-background: hsl(219, 30%, 18%);
-    --inside-cta-gradient: hsl(176, 68%, 64%);
-    --inside-cta-gradient: hsl(198, 60%, 50%);
+    --cyan-inside-cta-gradient: hsl(176, 68%, 64%);
+    --blue-inside-cta-gradient: hsl(198, 60%, 50%);
     --error: hsl(0, 100%, 63%);
     --white: hsl(0, 0%, 100%);
 }
@@ -19,5 +19,253 @@
 
 body {
     font-family: "Raleway", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: var(--main-background);
+    color: var(--white);
+}
+
+header {
+    width: 90vw;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.header-logo {
+    width: 8.5rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.nav-list li {
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+main {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.hero-section {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.25rem;
+    line-height: 1.5;
+}
+
+.hero-content p {
+    width: 75vw;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.hero-illustration {
+    width: 90vw;
+}
+
+.btn {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--cyan-inside-cta-gradient);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cta-action-background);
+}
+
+.hero-btn:hover {
+    background-color: var(--blue-inside-cta-gradient);
+    color: var(--white);
+}
+
+.highlights-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.highlight-content {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.highlight-content h4 {
+    font-size: 1.75rem;
+}
+
+.highlight-content p {
+    font-size: 1.25rem;;
+    line-height: 1.8;
+}
+
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.feature-illustration {
+    width: 80vw;
+}
+
+.feature-content {
+    width: 76vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.feature-content h2 {
+    font-size: 1.75rem;
+}
+
+.feature-content p {
+    font-size: 1.25rem;;
+    line-height: 1.8;
+}
+
+.feature-cta a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--cyan-inside-cta-gradient);
+    font-size: 1.15rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.feature-cta a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.875rem;
+    width: 12.875rem;
+    height: 0.125rem;
+    background-color: var(--cyan-inside-cta-gradient);
+}
+
+.feature-cta a img {
+    width: 1.5rem;
+}
+
+footer {
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
     background-color: var(--footer-background);
+}
+
+.footer-logo .location-info {
+    width: 60vw;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.75rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.location-icon {
+    width: 3.625rem;
+}
+
+.flyo-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.75rem;
+    font-size: 1.125rem;
+}
+
+.phone-icon {
+    width: 1.5rem;
+}
+
+.email-icon {
+    width: 1.75rem;
+}
+
+
+
+@media (min-width: 769px) {
+
+}
+
+@media (min-width: 1280px) {
+
 }
