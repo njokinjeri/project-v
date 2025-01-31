@@ -1,16 +1,20 @@
-const months = {
-    1: 'Jan',
-    2: 'Feb',
-    3: 'Mar',
-    4: 'Apr',
-    5: 'May',
-    6: 'Jun',
-    7: 'Jul',
-    8: 'Aug',
-    9: 'Sep',
-    10: 'Oct',
-    11: 'Nov',
-    12: 'Dec'
-};
+let doublePrices = Object.fromEntries (
+    Object.entries(prices).map( entry => [entry[0], entry[1] * 2]
+    )
+);
 
-const monthDisplay = months.id || 'Invalid Month';
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+  };
+
+let sumedSalaries = Object.values(
+   salaries.reduce((a,b) => a + b, 0)
+);
+
+alert(sumedSalaries);
+
+function sumedSalaries(salaries) {
+    return Object.values(salaries).reduce((a,b) => a + b, 0)
+}

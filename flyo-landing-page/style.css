@@ -211,9 +211,41 @@ main {
     width: 1.5rem;
 }
 
+.testimonials-section {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.875rem;
+    position: relative;
+}
+
+.testimonial-1 {
+    position: relative;
+    background-image: url(./images/bg-quotes.png);
+    background-repeat: no-repeat;
+    background-position: left -20px;
+    z-index: 1;
+}
+
+.testimonial {
+    padding: 2rem;
+    background-color: var(--testimonials-background);
+    width: 34rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 0.35rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    z-index: 2;
+}
+
 footer {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -260,6 +292,51 @@ footer {
     width: 1.75rem;
 }
 
+.footer-nav {
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.25rem;
+}
+
+.footer-nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.flyo-socials {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+}
+
+.flyo-socials a {
+    text-decoration: none;
+    border:  0.063rem solid var(--white);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flyo-socials a .fa-brands {
+    color: var(--white);
+    font-size: 1.25rem;
+}
 
 
 @media (min-width: 769px) {
