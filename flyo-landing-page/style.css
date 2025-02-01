@@ -60,6 +60,10 @@ header {
     font-weight: 500;
 }
 
+.nav-list li a:hover {
+    text-decoration: underline;
+}
+
 main {
     width: 90vw;
     display: flex;
@@ -219,40 +223,151 @@ main {
     align-items: center;
     gap: 2.875rem;
     position: relative;
-}
-
-.testimonial-1 {
-    position: relative;
-    background-image: url(./images/bg-quotes.png);
-    background-repeat: no-repeat;
-    background-position: left -20px;
-    z-index: 1;
+    padding-bottom: 4rem;
 }
 
 .testimonial {
     padding: 2rem;
     background-color: var(--testimonials-background);
-    width: 34rem;
-    height: 18rem;
+    width: 32.5rem;
+    height: 19rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-radius: 0.35rem;
+    gap: 2rem;
+    border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    z-index: 2;
+    position: relative;
 }
+
+.testimonial-1::before {
+    content: "";
+    position: absolute;
+    top: -2.25rem;
+    left: 0.625rem;
+    width: 40px; 
+    height: 40px;
+    background-image: url(./images/bg-quotes.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  blockquote {
+    width: 26rem;
+    font-size: 1.156rem;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+
+  .avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .avatar-image {
+    width: 3.5rem;
+    border-radius: 50%;
+  }
+
+  .avatar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    letter-spacing: 0.1rem;
+    opacity: 0.9;
+  }
+
+  .avatar-content h5 {
+    font-size: 1.125rem;
+  }
+
+  .avatar-paragraph {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .early-access-cta {
+    background-color: var(--cta-action-background);
+    padding: 2rem;
+    width: 34rem;
+    height: 34rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -350px;
+  }
+
+  .early-access-cta h3 {
+    font-size: 1.875rem;
+  }
+
+  .access-cta-paragraph {
+    width: 27rem;
+    font-size: 1.375rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .early-access-form {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .early-access-form input {
+    width: 27rem;
+    height: 4.5rem;
+    border-radius: 5rem;
+    border: none;
+  }
+
+  input[type=email] {
+    padding-left: 3.125rem;
+  }
+
+  input[type=email]::placeholder {
+    font-size: 1.125rem;
+    opacity: 0.6;
+  }
+
+  input[type=submit] {
+    background-color: var(--cyan-inside-cta-gradient);
+    color: var(--cta-action-background);
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--blue-inside-cta-gradient);
+    color: var(--white);
+}
+
 
 footer {
     width: 100vw;
     min-height: 100vh;
     padding: 3rem;
+    padding-top: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
     background-color: var(--footer-background);
+    z-index: 1;
+    position: relative;
 }
 
 .footer-logo .location-info {
@@ -313,6 +428,10 @@ footer {
     font-weight: 500;
 }
 
+.footer-nav li a:hover {
+    font-weight: 700;
+}
+
 .flyo-socials {
     padding-top: 5rem;
     display: flex;
@@ -336,6 +455,10 @@ footer {
 .flyo-socials a .fa-brands {
     color: var(--white);
     font-size: 1.25rem;
+}
+
+.flyo-socials a .fa-brands:hover {
+    color: var(--cyan-inside-cta-gradient);
 }
 
 
