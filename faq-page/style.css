@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color : #11111F ;
+    --primary-font: #FFF ;
+    --secondary-font : #8994A5;
+    --button-color: #CDD5E020;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+body {
+  font-family: "Be Vietnam Pro", san-serif;
+  background-color: var(--background-color);
+  color: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  }
+
+header {
+  width: 100%;
+  min-height: 28vh;
+  background-image: url(./assets/faq-title-bg@2x.png);
+  background-position: center;
+  background-size: contain ;
+  background-repeat: no-repeat;
+  color: var(--secondary-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+header h1 {
+  text-align: center;
+  font-size: 2.625rem;
+  color: var(--primary-font)
+  }
+
+main {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.hero-info {
+  margin: auto;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-subheader {
+  font-size: 1.25rem;
+}
+
+.hero-description {
+  color: var(--secondary-font);
+  font-size: 1 rem;
+}
+
+.faq-nav {
+  padding-top: 1.75rem;
+}
+
+.faq-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.faq-nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-nav button {
+  padding: 8px 18px;
+  border-radius: 3.125rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-font);
+  font-size: 0.938rem;
+  transition: all 0.3s ease;
+}
+
+.faq-nav button:hover {
+  background-color: rgba(168, 136, 255, 0.15); 
+}
+
+.faq-nav button.active {
+  background-color: var(--button-color);
+    box-shadow: 0 2px 0 #a888ff, rgb(0 0 0 / 5%) 0 0 8px;
+  color: var(--primary-font);
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+article {
+  background-color: var(--button-color);
+}
