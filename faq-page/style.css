@@ -21,12 +21,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
   }
 
 header {
   width: 100%;
-  min-height: 28vh;
+  padding: 4.5rem;
   background-image: url(./assets/faq-title-bg@2x.png);
   background-position: center;
   background-size: contain ;
@@ -40,34 +40,36 @@ header {
 header h1 {
   text-align: center;
   font-size: 2.625rem;
-  color: var(--primary-font)
+  color: var(--secondary-font)
   }
 
 main {
-  width: 60vw;
+  width: 90%;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 4rem;
 }
 
 .hero-info {
-  margin: auto;
-  width: 65vw;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+  text-align: center;
 }
 
 .hero-subheader {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .hero-description {
   color: var(--secondary-font);
-  font-size: 1 rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 .faq-nav {
@@ -77,12 +79,13 @@ main {
 .faq-nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .faq-nav ul li {
-  display: flex;
+  flex: 1 1 calc(50% - 1rem); 
   justify-content: center;
   align-items: center;
 }
@@ -94,7 +97,7 @@ main {
   border: none;
   cursor: pointer;
   color: var(--primary-font);
-  font-size: 0.938rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   transition: all 0.3s ease;
 }
 
@@ -109,13 +112,74 @@ main {
 }
 
 .faq-items {
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   gap: 1.2rem;
 }
 
-article {
+.faq-items article {
   background-color: var(--button-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: transparent;
+  transition: border 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-items article button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--primary-font);
+  padding: 0.75rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-items article button .accordion-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-items article button[aria-expanded="true"] .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-items article:has(button[aria-expanded="true"]) {
+  border: none;
+  background-color: var(--button-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+.faq-items .faq-content {
+  padding: 0.75rem 1rem;
+  text-align: justify;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/*tablet (> 600px) */
+
+@media (min-width: 600px) {
+  .faq-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .faq-nav ul li {
+    flex: 0 0 auto;
+}
+.faq-items {
+  width: 90%;
+  max-width: 780px;
+}
 }
