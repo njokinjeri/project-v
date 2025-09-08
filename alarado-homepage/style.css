@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: #2A4DD0;
+    --green: #4CA154;
+    --black: #111729;
+    --midnight-blue: #111729;
+    --grey: #909193;
+    --smoky-white: #F2F9FE;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem 1.25rem;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--smoky-white);
+}
+
+/* dark-mode*/
+body.dark {
+    background-color: var(--midnight-blue);
+    color: var(--white);
+}
+
+body.dark header .alarado-logo {
+    background-image: url(./assets/alarado-icon-homepage-dark.svg);
+}
+
+body.dark .hamburger-menu  {
+    background-color: var(--black);
+}
+
+body.dark .hamburger-menu span  {
+    background-color: var(--white);
+}
+
+body.dark .hamburger-menu .alarado-nav {
+    background-color: var(--black);
+}
+
+body.dark .hamburger-menu .nav-list a {
+    color: var(--grey);
+}
+
+body.dark .hero-content p,
+body.dark .hero-content h1,
+body.dark .cta-demo-link {
+    color: var(--white);
+}
+
+body.dark .mode-toggle-label {
+    background-color: #202e4a;
+}
+
+body.dark .fa-solid fa-moon {
+    color: var(--midnight-blue);
+}
+
+body.dark .fa-solid fa-sun {
+    color: var(--white);
+}
+
+
+header {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alarado-logo {
+    width: 10rem;
+    height: 10vh;
+    background-image: url(./assets/alarado-icon-homepage.svg);
+    background-repeat: no-repeat;
+    background-position: 10%;
+}
+
+/* dark-mode*/
+
+.mode-switcher {
+    opacity: 0;
+    position: absolute;
+}
+
+.mode-toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #202e4a;
+    width: 2.875rem;
+    height: 1.35rem;
+    border-radius: 2rem;
+    padding: 0.313rem;
+    cursor: pointer;
+}
+
+.fa-solid {
+    z-index: 2;
+    color: var(--white)
+}
+
+.mode-toggle-label .ball {
+    position: absolute;
+    top: 0.063rem;
+    left: 0.188rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    z-index: 1;
+    transition: transform 0.2s linear;
+}
+
+.mode-switcher:checked + .mode-toggle-label > .ball {
+    transform: translate(1.25rem);
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.875rem;
+    color: var(--grey);
+}
+
+ul li a:hover {
+    color: #2A4DD0;
+    text-decoration: underline;
+    text-underline-offset: 0.313rem;
+    text-decoration-thickness: 0.125rem;
+}
+
+.focused-list a {
+    color: var(--blue);
+    text-decoration: underline;
+    text-underline-offset: 0.313rem;
+    text-decoration-thickness: 0.125rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-text1 {
+    font-weight: 600;
+    font-size: 0.938rem;
+    color: var(--midnight-blue);
+}
+
+.hero-content h1 {
+    width: 70vw;
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.hero-text2 {
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.hero-cta {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.cta-started-btn {
+    padding: 0.875rem 1.875rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0.75rem;
+}
+
+.cta-started-btn:hover {
+    background-color: var(--green);
+}
+
+.cta-demo-link {
+    color: var(--blue);
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.125rem;
+}
+
+.cta-highlights {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    gap: 1.75rem;
+}
+
+.cta-highlights p {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--grey);
+    text-align: center;
+}
+
+.hero-image img {
+    width: 75vw;
+    display: flex;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.feature-hero {
+    width: 100%;
+}
+
+
+/* mobile-nav*/
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.75rem;
+        background-color: var(--white);
+        position: fixed;
+        right: 2rem;
+        cursor: pointer;
+    }
+    
+    #menuCheckbox {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .hamburger-menu span {
+        display: block;
+        width: 1.5rem;
+        height: 0.188rem;
+        margin-bottom: 0.225rem;
+        position: relative;
+        background-color: var(--midnight-blue);
+        border-radius: 1rem;
+        z-index: 1;
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .hamburger-feature:checked ~ label span:first-of-type {
+        transform: rotate(45deg) translate(4.7px, 5px);
+    }
+    
+    .hamburger-feature:checked ~ label span:nth-of-type(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    .hamburger-feature:checked ~ label span:last-of-type {
+        transform: rotate(-45deg) translate(4.7px, -5px);
+    }
+    
+    .alarado-nav {
+        width: 75vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 9rem;
+        background-color: var(--white);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+    }
+    
+    .hamburger-feature:checked ~ .alarado-nav {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+    } 
+}
+
+
+@media (min-width: 769px) { 
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    header {
+        width: 85vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: var(--smoky-white);
+    }
+
+    .hamburger-feature {
+        display: none;
+    }
+
+    .alarado-nav {
+        width: 58vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        transition: none;
+    }
+
+    .alarado-list {
+        width: 50vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.875rem;
+    }
+
+    .alarado-list li a {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    ul li a  {
+        color: var(--midnight-blue);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+
+    .alarado-list li a {
+        font-size: 1.063rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        width: 35vw;
+        padding-left: 1rem;
+    }
+
+    .hero-content h1 {
+        width: 30vw;
+        font-size: 3rem;
+    }
+
+    .hero-image img {
+        width: 36rem;
+    }
+
+    .cta-highlights p {
+        color: var(--black);
+    }
+}
+
+
+@media (min-width: 1280px) {
+
+    header {
+        width: 80rem
+    }
+
+    .alarado-nav {
+        width: 60rem;
+    }
+
+    .alarado-list {
+        width: 40rem;
+    }
+    
+    .hero-content {
+        width: 40rem;
+    }
+
+    .hero-content h1 {
+        width: 20rem;
+        font-size: 3.6rem;
+    }
+
+    .hero-image img {
+        width: 38rem;
+    }
+
+    .hero-cta,
+    .cta-highlights {
+        width: 35vw;
+    }
+}
+
+
+
+
