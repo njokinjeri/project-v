@@ -308,11 +308,16 @@ label {
     pointer-events: none;   
 }
 
+.form-actions input {
+    padding-left: 0;
+}
+
 #cancel-action {
     width: 22vw;
     background-color: var(--lavender-mist);
     font-size: var(--font-size-medium);
     font-weight: 600;
+    text-align: center;
 }
 
 #subscribe-action {
