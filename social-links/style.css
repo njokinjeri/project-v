@@ -47,7 +47,7 @@ body {
 main {
     padding: 2rem;
     margin: 1rem;
-    height: 80vh;
+    height: 70vh;
     background-color: var(--Dark-Grey);
     display: flex;
     flex-direction: column;
@@ -115,35 +115,6 @@ main {
     background-color: var(--green);
     color: var(--Off-Black);
 }
-
-/* footer styles*/
-footer {
-    height: 10vh;
-    padding: 0.625rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    font-weight: 500;
-    color: var(--white);
-    font-size: var(--font-size-large);
-}
-
-footer p{
-    font-style: italic;
-    color: var(--Grey);
-}
-
-footer p:hover {
-    color: var(--green);
-}
-
-.my-icon {
-    height: 70px;
-    width: 70px;
-}
-
-
 
 /* Base styles for tables & desktop*/
 @media screen and (min-width: 960px) {
