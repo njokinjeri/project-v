@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/shared/logo.svg">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/crew.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <title>Space Tourism</title>
+</head>
+<body>
+  <header>
+    <a href="./index.html">
+      <img class="logo-icon" src="./assets/shared/logo.svg" alt="space-logo">
+    </a>
+    <nav>
+      <input type="checkbox" id="hamburger-menu" class="menu-toggle"/>
+      <label for="hamburger-menu" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="./index.html" class="active"><span class="a-span">00</span> HOME</a></li>
+        <li><a href="./destination.html"><span class="a-span">01</span> DESTINATION</a></li>
+        <li><a href="./crew.html"> <span class="a-span">02</span> CREW</a></li>
+        <li><a href="./technology.html"> <span>03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section class="crew-section">
+        <h3 class="crew-subheader"><span>02</span> MEET YOUR CREW</h3>
+        <article id="crew-article">
+          <div class="crew-content">
+            <h4 id="crew-role">COMMANDER</h4>
+            <h3 id="crew-name">DOUGLAS HURLEY</h3>
+            <p id="crew-description">
+              Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+              and former NASA astronaut. He launched into space for the third time as 
+              commander of Crew Dragon Demo-2.
+            </p>
+          </div>
+          <div class="crew-carousel">
+            <button class="active" aria-label="Crew member 1"></button>
+            <button aria-label="Crew member 2"></button>
+            <button aria-label="Crew member 3"></button>
+            <button aria-label="Crew member 4"></button>
+          </div>
+          <picture id="crew-profile">
+            <source id="crew-image-webp" srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
+            <img id="crew-image" src="./assets/crew/image-douglas-hurley.png" alt="crew member" class="crew-profile">
+          </picture>
+        </article>
+    </section>
+    <script src="./js/crew.js" defer></script>
+</body>
+</html>

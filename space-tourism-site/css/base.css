@@ -1,0 +1,45 @@
+/* Variables */
+:root {
+  --primary-blue: #0B0D17;
+  --secondary-blue: #D0D6F9;
+  --white: #FFFFFF;
+  --menu-backdrop: rgba(11, 13, 23, 0.15);
+  --primary-font: "Bellefair", serif;
+  --secondary-font: "Barlow", sans-serif;
+  --tertiary-font: "Barlow Condensed", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global structure */
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Global typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--white);
+}
+
+p {
+  color: var(--secondary-blue);
+  font-family: var(--secondary-font);
+  line-height: 1.8;
+}
+
+footer {
+  padding: 0.75rem;
+  text-align: center;
+  color: var(--secondary-blue);
+}

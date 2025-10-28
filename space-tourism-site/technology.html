@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/shared/logo.svg">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/technology.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+  <title>Space Tourism - Technology</title>
+</head>
+<body>
+  <header>
+    <a href="./index.html">
+      <img class="logo-icon" src="./assets/shared/logo.svg" alt="space-logo">
+    </a>
+    <nav>
+      <input type="checkbox" id="hamburger-menu" class="menu-toggle"/>
+      <label for="hamburger-menu" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="./index.html" class="active"><span class="a-span">00</span> HOME</a></li>
+        <li><a href="./destination.html"><span class="a-span">01</span> DESTINATION</a></li>
+        <li><a href="./crew.html"> <span class="a-span">02</span> CREW</a></li>
+        <li><a href="./technology.html"> <span>03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="technology-section">
+    <h3 class="technology-subheader"><span>03</span> SPACE LAUNCH 101</h3>
+    <article id="tech-article">
+      <picture>
+        <source id="tech-img-landscape" media="(max-width: 1025px)" srcset="">
+        <img id="tech-image" src="" alt="Technology Image">
+      </picture>
+      <div class="tech-btn">
+      </div>
+      <div class="tech-content">
+        <h4 id="tech-article-heading">THE TERMINOLOGY...</h4>
+        <h3 id="tech-name"></h3>
+        <p id="tech-description"></p>
+      </div>
+    </article>
+  </section>
+
+  <script src="./js/technology.js" defer></script>
+</body>
+</html>

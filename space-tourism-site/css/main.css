@@ -1,0 +1,132 @@
+body {
+  background-image: url(/assets/home/background-home-mobile.jpg);
+  gap: 5rem;
+}
+
+main {
+  padding: 0 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Hero Section */
+.homepage-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.homepage-section h3 {
+  color: var(--secondary-blue);
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-family: var(--tertiary-font);
+}
+
+.homepage-section h1 {
+  font-size: 8rem;
+  color: var(--white);
+  font-family: var(--primary-font);
+}
+
+.homepage-section p {
+  width: 22rem;
+  text-align: center;
+  word-spacing: 0.063rem;
+}
+
+/* Explore button */
+.explore-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-explore {
+  width: 10rem;
+  height: 10rem;
+  text-decoration: none;
+  border-radius: 50%;
+  color: var(--primary-blue);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.homepage-explore::before {
+  content: "";
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.homepage-explore:hover::before {
+  transform: scale(1.5);
+  opacity: 0.2;
+}
+
+.homepage-explore:hover {
+  color: #9fa2b1;
+}
+
+/* --------- MEDIA QUERIES --------- */
+@media (min-width: 769px) {
+  body {
+    background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+
+  main {
+    gap: 4rem;
+  }
+
+  .homepage-section p {
+    width: 34rem;
+    font-size: 1.125rem;
+  }
+
+  .homepage-explore {
+    width: 14rem;
+    height: 14rem;
+    font-size: 1.5rem;
+  }
+
+  .homepage-explore::before {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url(/assets/home/background-home-desktop.jpg);
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homepage-section {
+    width: 56%;
+    align-items: flex-start;
+  }
+
+  .homepage-section p {
+    text-align: justify;
+  }
+}

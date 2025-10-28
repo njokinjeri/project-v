@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/shared/logo.svg">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/destination.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <title>Space Tourism</title>
+</head>
+<body>
+  <header>
+    <a href="./index.html">
+      <img class="logo-icon" src="./assets/shared/logo.svg" alt="space-logo">
+    </a>
+    <nav>
+      <input type="checkbox" id="hamburger-menu" class="menu-toggle"/>
+      <label for="hamburger-menu" class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul class="menu">
+        <li><a href="./index.html" class="active"><span class="a-span">00</span> HOME</a></li>
+        <li><a href="./destination.html"><span class="a-span">01</span> DESTINATION</a></li>
+        <li><a href="./crew.html"> <span class="a-span">02</span> CREW</a></li>
+        <li><a href="./technology.html"> <span>03</span> TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section class="destination-section">
+      <h3 class="destination-subheader"><span>01</span> PICK YOUR DESTINATION</h3>
+      <article class="destination-article">
+        <picture id="destination-picture">
+          <source id="destination-image-webp" srcset="./assets/destination/image-moon.webp" type="images/webp">
+          <img id="destination-image" src="./assets/destination/image-moon.png" alt="moon-image" class="destination-image">
+        </picture>
+        <div class="destination-content">
+          <div class="destination-tabs">
+            <button class="active">MOON</button>
+            <button>MARS</button>
+            <button>EUROPA</button>
+            <button>TITAN</button>
+          </div>
+          <h2 id="destination-name">MOON</h2>
+          <p id="destination-description">
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+            regain perspective and come back refreshed. While you’re there, take in some history 
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+          <hr>
+          <div class="destination-stats">
+            <p>
+              <span>AVG.DISTANCE </span>
+              <span id="destination-distance">384,400 KM</span>
+            </p>
+            <P>
+              <span>EST. TRAVEL TIME</span>
+              <span id="destination-time">3 DAYS</span>
+            </P>
+          </div>
+        </div>
+      </article>
+    </section>
+    <script src="./js/destination.js"></script>
+</body>
+</html>
+
+
+
