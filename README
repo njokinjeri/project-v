@@ -1,10 +1,13 @@
-# Project Vanilla: Back to Basics
-This repository showcases a collection of **frontend development projects** built solely using **plain JavaScript**, **CSS**, and **semantic HTML**. It serves as a testament to my commitment to mastering the core web development technologies—without relying on frameworks, preprocessors, or external libraries.
+# Project Vanilla: \
 
-Each project is sourced from platforms like [**Frontend Mentor**](https://www.frontendmentor.io/home) and [**Dev Challenges**](https://devchallenges.io/dashboard), providing real-world UI/UX challenges designed to sharpen my skills in crafting fully responsive, accessible, and maintainable web applications.
+This repository is my playground for experimenting with the core building blocks of the web - HTML, CSS, and Vanilla JavaScript.
+
+Each project here is a small-scale challenge crafted to refine my understanding of frontend fundamentals, UI/UX design, and clean, maintainable code - no frameworks, no shortcuts.
+
+The challenges are sourced from platforms like [**Frontend Mentor**](https://www.frontendmentor.io/home) and [**Dev Challenges**](https://devchallenges.io/dashboard), offering real-world scenarios that test everything from responsive layouts to accessibility and user interactivity.
+
 ## Featured Projects
 
-Here’s a list of the projects available in this repository for practicing your skills:
 
 | No. | Project                          |
 | --- | -------------------------------- |
@@ -58,9 +61,9 @@ Here’s a list of the projects available in this repository for practicing your
 
 ## Core Technologies
 
-- **HTML5**: For creating structured, accessible, and semantic markup.
-- **CSS3**: To design responsive layouts, animations, and custom styling.
-- **Vanilla JavaScript**: Implementing dynamic functionality without external libraries or frameworks.
+- **HTML5**: For structure and semantics
+- **CSS3**: For styling, layout and animations
+- **Vanilla JavaScript**: For interactivity and logic
 
 
 ## Resources
