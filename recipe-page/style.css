@@ -1,7 +1,4 @@
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
-  /*
-      font-family: 'Outfit', sans-serif;
-      font-family: 'Young Serif', serif; */
 
   body {
       margin: 0;
@@ -13,8 +10,6 @@
       align-items: center;
       color: hsl(24, 5%, 18%);
       font-family: 'Outfit', sans-serif;
-
-
   }
 
   .container {
@@ -25,10 +20,8 @@
       background: hsl(0, 0%, 100%);
       border-radius: 15px;
       overflow: hidden;
-
   }
 
-  /*header*/
 
   header {
       padding: 20px;
@@ -48,7 +41,6 @@
       height: auto;
       border-radius: 10px;
       object-fit: cover;
-
   }
 
   section {
@@ -60,7 +52,6 @@
       font-family: 'Young Serif', serif;
       font-size: 24px;
       font-weight: 200;
-
   }
 
   .preparation-time {
@@ -169,7 +160,6 @@
       border-bottom: 1px solid hsl(0, 2%, 74%);
       padding-bottom: 10px;
       padding-left: 30px;
-
   }
 
   .nutrition table tr:last-child td {
@@ -177,21 +167,6 @@
       padding-bottom: 20px;
       padding-left: 30px;
   }
-
-
-  /* footer */
-  footer {
-      font-family: 'Young Serif', serif;
-      font-size: 12px;
-      text-align: center;
-      margin-top: 20px;
-  }
-
-  footer a {
-      color: hsl(332, 51%, 32%);
-  }
-
-  /* Responsive style features*/
 
   /* Mobile Styles - Mobile: 375px*/
   @media screen and (max-width:375px) {
