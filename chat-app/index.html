@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="/icons/bug.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Chat App</title>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="phone-container">
+        <div class="inner-container">
+          <div class="phone-header">
+            <div class="blank-container-pill"></div>
+            <div class="phone-header-info">
+              <div class="avatar-info">
+                <i class="fa fa-angle-left"></i>
+                <div class="avatar-content">
+                  <img class="avatar-profile" src="./images/avatar.jpg" alt="avatar-profile">
+                  <div class="header-content">
+                    <h3>Samuel Green</h4>
+                    <p>Available to walk</p>
+                  </div>
+                </div>
+              </div>
+              <div class="header-addon">
+                <span class="profile-more"></span>
+                <span class="profile-more"></span>
+                <span class="profile-more"></span>
+              </div>
+            </div>
+          </div>
+          <div class="phone-body-content">
+            <div class="sender-text-box box-1">
+              <p>That sounds great. I’d be happy to discuss more.</p>
+            </div>
+            <div class="sender-text-box box-2">
+              <p>Could you send over some pictures of your dog, please?</p>
+            </div>
+            <div class="receiver-image-box">
+              <img class="dog-image" src="./images/dog-image-1.jpg" alt="dog-image-1">
+              <img class="dog-image" src="./images/dog-image-2.jpg" alt="dog-image-2">
+              <img class="dog-image" src="./images/dog-image-3.jpg" alt="dog-image-3">
+            </div>
+            <div class="receiver-text-box box-1">
+              <p>Here are a few pictures. She’s a happy girl!</p>
+            </div>
+            <div class="receiver-text-box box-2">
+              <p>Can you make it?</p>
+            </div>
+            <div class="sender-text-box box-3">
+              <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+            </div>
+            <div class="pricing-feature">
+              <p><span class="pricing-circle"></span>30 minute walk</p>
+              <h4>$29</h4>
+            </div>
+            <div class="pricing-feature last">
+              <p><span class="pricing-circle"></span>1 hour walk</p>
+              <h4>$49</h4>
+            </div>
+            <form class="message-form">
+              <label for="message-box"></label>
+              <textarea name="message-box" id="message-box" rows="2" cols="20" placeholder="Type a message..."></textarea>
+              <button type="submit" class="message-send-action" aria-label="Send message">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="feature-content">
+        <h1 >Simple booking</h1>
+        <p>Stay in touch with our dog walkers through the chat interface. 
+          This makes it easy to discuss arrangements and make bookings. 
+          Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+      </div>
+    </section>
+  </main>
+  <script src="chat.js"></script>
+</body>
+</html>
