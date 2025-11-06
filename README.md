@@ -25,7 +25,7 @@ The challenges are sourced from platforms like [**Frontend Mentor**](https://www
 | 12  | IP Address Tracker               |
 | 13  | Music Player                     |
 | 14  | Image Uploader                   |
-| 15  | Random Quote Generator           |
+| 15  | Devjobs Web App                  |
 | 16  | Password Generator               |
 | 17  | Weather App                      |
 | 18  | Recipe Page                      |
