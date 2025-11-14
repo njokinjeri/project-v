@@ -143,15 +143,11 @@ button:hover {
     font-style: italic;
 }
 
-#blinking-effect {
+.dash-display {
     color: var(--purple);
     animation: blink 5s linear infinite
 }
 
-@keyframes blink {
-    0%, 100% {opacity: 1;}
-    50% {opacity: 0;}
-}
 
 @media (min-width: 769px) {
 
