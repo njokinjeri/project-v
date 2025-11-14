@@ -1,68 +1,101 @@
 const form = document.getElementById('form');
+const dayInput = document.getElementById('birth_day');
+const monthInput = document.getElementById('birth_month');
+const yearInput = document.getElementById('birth_year');
+const yearsDisplay = document.getElementById('years-display');
+const monthsDisplay = document.getElementById('months-display');
+const daysDisplay = document.getElementById('days-display');
+const errorDay = document.getElementById('error-input-day');
+const errorMonth = document.getElementById('error-input-month');
+const errorYear = document.getElementById('error-input-year');
+
+const CURRENT_CENTURY = 2000;
+const MAX_TWO_DIGIT_YEAR = 100;
+
+form.addEventListener('submit', calculateAge);
 
 function calculateAge(e) {
   e.preventDefault();
-  const birthDay = parseInt(document.getElementById('birth_day').value);
-  const birthMonth = parseInt(document.getElementById('birth_month').value);
-  let birthYear = parseInt(document.getElementById('birth_year').value);
   
-  if (birthYear < 100) {
-    birthYear += 2000;
+  const birthDay = parseInt(dayInput.value.trim());
+  const birthMonth = parseInt(monthInput.value.trim());
+  let birthYear = parseInt(yearInput.value.trim());
+  
+  if (birthYear < MAX_TWO_DIGIT_YEAR) {
+    birthYear += CURRENT_CENTURY;
   }
   
   if (!validateInputs(birthDay, birthMonth, birthYear)) {
     return;
   }
   
-  const age = getAge(birthYear, birthMonth, birthDay);
+  const age = computeAge(birthYear, birthMonth, birthDay);
   displayAge(age);
 }
 
 function validateInputs(day, month, year) {
   let isValid = true;
   
-  if (isNaN(day) || day < 1 || day > 31) {
-    showError('error-input-day', 'Must be a valid date');
+  if (!isValidDay(day)) {
+    setError(errorDay, 'Must be a valid day');
     isValid = false;
   } else {
-    clearError('error-input-day');
+    clearError(errorDay);
   }
   
-  if (isNaN(month) || month < 1 || month > 12) {
-    showError('error-input-month', 'Must be a valid month');
+  if (!isValidMonth(month)) {
+    setError(errorMonth, 'Must be a valid month');
     isValid = false;
   } else {
-    clearError('error-input-month');
+    clearError(errorMonth);
   }
   
-  if (isNaN(year) || year < 1) {
-    showError('error-input-year', 'Must be a valid year');
+  if (!isValidYear(year)) {
+    setError(errorYear, 'Must be a valid year');
     isValid = false;
   } else {
-    clearError('error-input-year');
+    clearError(errorYear);
   }
   
-  if (isValid) {
-    const testDate = new Date(year, month - 1, day);
-    if (testDate.getDate() !== day || testDate.getMonth() !== month - 1) {
-      showError('error-input-day', 'This date does not exist');
-      isValid = false;
-    }
+  if (!isValid) {
+    return false;
   }
   
-  if (isValid) {
-    const birthDate = new Date(year, month - 1, day);
-    const today = new Date();
-    if (birthDate > today) {
-      showError('error-input-year', 'Birth date cannot be in the future');
-      isValid = false;
-    }
+  const testDate = new Date(year, month - 1, day);
+  if (!isRealDate(testDate, day, month)) {
+    setError(errorDay, 'This date does not exist');
+    return false;
   }
   
-  return isValid;
+  if (isFutureDate(testDate)) {
+    setError(errorYear, 'Birth date cannot be in the future');
+    return false;
+  }
+  
+  return true;
 }
 
-function getAge(year, month, day) {
+function isValidDay(day) {
+  return !isNaN(day) && day >= 1 && day <= 31;
+}
+
+function isValidMonth(month) {
+  return !isNaN(month) && month >= 1 && month <= 12;
+}
+
+function isValidYear(year) {
+  return !isNaN(year) && year >= 1;
+}
+
+function isRealDate(date, day, month) {
+  return date.getDate() === day && date.getMonth() === month - 1;
+}
+
+function isFutureDate(date) {
+  return date > new Date();
+}
+
+function computeAge(year, month, day) {
   const today = new Date();
   const birthDate = new Date(year, month - 1, day);
   
@@ -71,7 +104,7 @@ function getAge(year, month, day) {
   let days = today.getDate() - birthDate.getDate();
   
   if (days < 0) {
-    const daysInPrevMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+    const daysInPrevMonth = getDaysInPreviousMonth(today);
     days += daysInPrevMonth;
     months--;
   }
@@ -84,18 +117,20 @@ function getAge(year, month, day) {
   return { years, months, days };
 }
 
-function displayAge(age) {
-  document.getElementById('years-display').textContent = age.years;
-  document.getElementById('months-display').textContent = age.months;
-  document.getElementById('days-display').textContent = age.days;
+function getDaysInPreviousMonth(date) {
+  return new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 }
 
-function showError(elementId, message) {
-  document.getElementById(elementId).textContent = message;
+function displayAge({ years, months, days }) {
+  yearsDisplay.textContent = years;
+  monthsDisplay.textContent = months;
+  daysDisplay.textContent = days;
 }
 
-function clearError(elementId) {
-  document.getElementById(elementId).textContent = '';
+function setError(element, message) {
+  element.textContent = message;
 }
 
-form.addEventListener('submit', calculateAge);
+function clearError(element) {
+  element.textContent = '';
+}
