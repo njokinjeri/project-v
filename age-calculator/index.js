@@ -1,35 +1,45 @@
 const form = document.getElementById('form');
+const birthDayInput = document.getElementById('birth_day');
+const birthMonthInput = document.getElementById('birth_month');
+const birthYearInput = document.getElementById('birth_year');
+const errorInputDay = document.getElementById('error-input-day');
+const errorInputMonth = document.getElementById('error-input-day');
+const errorInputYear = document.getElementById('error-input-day');
+const yearsEntryDisplay = document.getElementById('years-display');
+const monthsEntryDisplay = document.getElementById('months-display');
+const daysEntryDisplay = document.getElementById('days-display');
 
 
 function calculateAge(e) {
     e.preventDefault();
-    const birthDay = parseInt(document.getElementById('birth_day').value);
-    const birthMonth = parseInt(document.getElementById('birth_month').value);
-    const birthYear = parseInt(document.getElementById('birth_year').value);
+    
+    const birthDay = parseInt(birthDayInput.value);
+    const birthMonth = parseInt(birthMonthInput.value);
+    let birthYear = parseInt(birthYearInput.value);
     
     if (birthYear < 100) birthYear += 2000;
     const today = new Date();
     let valid = true;
     
     if (isNaN(birthDay) || birthDay < 1 || birthDay > 31) {
-        document.getElementById('error-input-day').textContent = 'Must be a valid date';
+        showError(errorInputDay, 'Must be a valid date')
         valid = false;
     } else {
-        document.getElementById('error-input-day').textContent = '';
+        clearError(errorInputDay)
     }
     
     if (isNaN(birthMonth) || birthMonth < 1 || birthMonth > 12) {
-        document.getElementById('error-input-month').textContent = 'Must be a valid month ';
+        showError(errorInputDay, 'Must be a valid month')
         valid = false;
     } else {
-        document.getElementById('error-input-month').textContent = '';
+        clearError(errorInputMonth)
     }
     
     if (isNaN(birthYear) || birthYear < 1) {
-        document.getElementById('error-input-year').textContent = 'Must be a valid year';
+        showError(errorInputYear, 'Must be a valid year')
         valid = false;
     } else {
-        document.getElementById('error-input-year').textContent = '';
+        clearError(errorInputYear)
     }
     if (!valid) return;
     
@@ -46,9 +56,17 @@ function calculateAge(e) {
         months += 12
         years--;
     }
-    document.getElementById('years-display').textContent= years;
-    document.getElementById('months-display').textContent= months;
-    document.getElementById('days-display').textContent= days;
+    yearsEntryDisplay.textContent = years;
+    monthsEntryDisplay.textContent = months;
+    daysEntryDisplay.textContent = days;
+}
+
+function showError(element, message) {
+    element.textContent = message;
+}
+
+function clearError(element) {
+    element.textContent = '';
 }
 
 form.addEventListener("submit", calculateAge);
