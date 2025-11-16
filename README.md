@@ -12,50 +12,44 @@ The challenges are sourced from platforms like [**Frontend Mentor**](https://www
 | No. | Project                          |
 | --- | -------------------------------- |
 | 1   | Space Tourism Multipage          |
-| 2   | Arch Studio Multipage            |
 | 3   | Maker Pre-Launch Landing Page    |
 | 4   | Huddle Landing Page              |
 | 5   | Manage Landing Page              |
-| 6   | Bookmark Landing Page            |
-| 7   | Recipe Finder Website            |
-| 8   | Calculator App                   |
-| 9   | Clock App                        |
-| 10  | Pomodoro App                     |
-| 11  | Tic Tac Toe                      |
-| 12  | IP Address Tracker               |
-| 13  | Music Player                     |
-| 14  | Image Uploader                   |
-| 15  | Devjobs Web App                  |
-| 16  | Password Generator               |
-| 17  | Weather App                      |
-| 18  | Recipe Page                      |
-| 19  | Social Links Profile             |
-| 20  | Testimonial Grid Section         |
-| 21  | Flyo Data Storage Component      |
-| 22  | Social Proof Section             |
-| 23  | Interactive Rating Component     |
-| 24  | Simple Article Listing           |
-| 25  | Bento Box Section                |
-| 26  | Pricing Table                    |
-| 27  | Four Card Feature Section        |
-| 28  | Contact Page                     |
-| 29  | Ping Single Column               |
-| 30  | Subscription Checkout            |
-| 31  | Simple Feature Section           |
-| 32  | Simple Newsletter                |
-| 33  | CSS Chat Illustration            |
-| 34  | Alarado Homepage                 |
-| 35  | Hufie - Homepage                 |
-| 36  | FAQ Page                         |
-| 37  | Age Calculator App               |
-| 38  | Tip Calculator App               |
-| 39  | Interactive Pricing Component    |
-| 40  | Interactive Card Details Form    |
-| 41  | Crowd Funding Page               |
-| 42  | Expenses Chart Component         |
-| 43  | Browser Extension Manager        |
-| 44  | Character Counter                |
-| 45  | Conference Ticket Generator      |
+| 6   | Recipe Finder Website            |
+| 7   | Calculator App                   |
+| 8   | Clock App                        |
+| 9   | Pomodoro App                     |
+| 10  | Tic Tac Toe                      |
+| 11  | IP Address Tracker               |
+| 12  | Music Player                     |
+| 13  | Image Uploader                   |
+| 14  | Password Generator               |
+| 15  | Weather App                      |
+| 16  | Memory Game                      |
+| 17  | Recipe Page                      |
+| 18  | Social Links Profile             |
+| 19  | Testimonial Grid Section         |
+| 20  | Flyo Data Storage Component      |
+| 21  | Social Proof Section             |
+| 22  | Interactive Rating Component     |
+| 23  | Simple Article Listing           |
+| 24  | Bento Box Section                |
+| 25  | Pricing Table                    |
+| 26  | Four Card Feature Section        |
+| 27  | Contact Page                     |
+| 28  | Ping Single Column               |
+| 29  | Subscription Checkout            |
+| 30  | Simple Feature Section           |
+| 31  | Simple Newsletter                |
+| 32  | CSS Chat Illustration            |
+| 33  | Alarado Homepage                 |
+| 34  | Hufie - Homepage                 |
+| 35  | FAQ Page                         |
+| 36  | Age Calculator App               |
+| 37  | Tip Calculator App               |
+| 38  | Interactive Pricing Component    |
+| 39  | Interactive Card Details Form    |
+
 
 
 
