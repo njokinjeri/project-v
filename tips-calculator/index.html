@@ -2,43 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/icons/bug.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Tips Calculator</title>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <h2>SPLI <br> TTER</h2>
+    <article>
+      <form>
+        <section>
+          <div class="billing-container">
+            <h3>Bill</h3>
+            <div class="input-icon">
+              <img src="./images/icon-dollar.svg" alt="dollar-icon">
+              <label for="total-bill"></label>
+              <input type="number" name="total-bill" id="total-bill" inputmode="decimal" placeholder="0.00" min="1" step="0.01">
+            </div>
+          </div>
+          <div class="tipping-container">
+            <h3>Select Tip %</h3>
+            <div id="top-options">
+              <button type="button" data-tip="5">5%</button>
+              <button type="button" data-tip="10">10%</button>
+              <button type="button" data-tip="15">15%</button>
+              <button type="button" data-tip="25">25%</button>
+              <button type="button" data-tip="50">50%</button>
+              <label for="custom-percent"></label>
+              <input type="number" name="custom-percent" id="custom-percent" placeholder="Custom %" min="1" max="100">
+            </div>
+          </div>
+          <div class="customer-container">
+            <h3>Number of People</h3>
+            <div class="input-icon">
+              <img src="./images/icon-person.svg" alt="person-icon">
+              <label for="number-of-people"></label>
+              <input type="number" name="number-of-people" id="number-of-people" placeholder="1" min="1">
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="tip-aggregator">
+            <div class="aggregator-sum">
+              <h4>Tip Amount</h4>
+              <p>/ per person</p>
+            </div>
+            <output id="tip-per-person"></output>
+          </div>
+          <div class="total">
+            <div class="total-content">
+              <h4>Total</h4>
+              <p>/ per person</p>
+            </div>
+            <output id="total-per-person"></output>
+          </div>
+        <label for="button"></label>
+        <button type="reset" disabled>RESET</button>
+        </section>
+      </form>
+    </article>
+  </main>
 </body>
 </html>
