@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/icons/bug.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Uploader</title>
+</head>
+<body>
+    <script src="app.js"></script>
+    <main>
+        <nav>
+            <img class="uploader-logo" src="./assets/logo.svg" alt="logo-icon">
+            <div class="theme-toggle">
+                    <img class="theme-icon" src="./assets/Moon_fill.svg" alt="theme-icon">
+            </div>
+        </nav>
+        <hr>
+        <section>
+            <article>
+                <p class="dragdrop-text">Drag & Drop your image here
+                    <img id="drag-drop-img" src="./assets/image.svg" alt="drag-drop-image">
+                </p>
+                <p class="option-text">or</p>
+                <form>
+                    <input type="file" name="browse-file" id="selectedFile">
+                </form>
+                <p class="file-specs">JPG, PNG or GIF - Max File Size 2MB</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
