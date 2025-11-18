@@ -48,7 +48,11 @@ The challenges are sourced from platforms like [**Frontend Mentor**](https://www
 | 35  | Tip Calculator App               |
 | 36  | Interactive Pricing Component    |
 | 37  | Interactive Card Details Form    |
-
+| 38  | Guess the Word Game              |
+| 39  | Text to Speech app               |
+| 40  | Hangman Game                     |
+| 41  | Connect Four Game                |
+| 42  | Rock Paper Scissor Game          |
 
 
 
