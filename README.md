@@ -8,51 +8,52 @@ The challenges are sourced from platforms like [**Frontend Mentor**](https://www
 
 ## Featured Projects
 
-
-| No. | Project                          |
-| --- | -------------------------------- |
-| 1   | Space Tourism Multipage          |
-| 2   | Maker Pre-Launch Landing Page    |
-| 3   | Huddle Landing Page              |
-| 4   | Manage Landing Page              |
-| 5   | Calculator App                   |
-| 6   | Clock App                        |
-| 7   | Pomodoro App                     |
-| 8   | Tic Tac Toe                      |
-| 9   | IP Address Tracker               |
-| 10  | Music Player                     |
-| 11  | Image Uploader                   |
-| 12  | Password Generator               |
-| 13  | Weather App                      |
-| 14  | Memory Game                      |
-| 15  | Recipe Page                      |
-| 16  | Social Links Profile             |
-| 17  | Testimonial Grid Section         |
-| 18  | Flyo Data Storage Component      |
-| 19  | Social Proof Section             |
-| 20  | Interactive Rating Component     |
-| 21  | Simple Article Listing           |
-| 22  | Bento Box Section                |
-| 23  | Pricing Table                    |
-| 24  | Four Card Feature Section        |
-| 25  | Contact Page                     |
-| 26  | Ping Single Column               |
-| 27  | Subscription Checkout            |
-| 28  | Simple Feature Section           |
-| 29  | Simple Newsletter                |
-| 30  | CSS Chat Illustration            |
-| 31  | Alarado Homepage                 |
-| 32  | Hufie - Homepage                 |
-| 33  | FAQ Page                         |
-| 34  | Age Calculator App               |
-| 35  | Tip Calculator App               |
-| 36  | Interactive Pricing Component    |
-| 37  | Interactive Card Details Form    |
-| 38  | Guess the Word Game              |
-| 39  | Text to Speech app               |
-| 40  | Hangman Game                     |
-| 41  | Connect Four Game                |
-| 42  | Rock Paper Scissor Game          |
+| No. | Project |
+| --- | ---------------------------------------------- |
+| 1   | Rock Paper Scissors Game |
+| 2   | Connect Four Game |
+| 3   | Guess The Word Game |
+| 4   | Tic Tac Toe Game |
+| 5   | Memory Game |
+| 6   | Hangman Game |
+| 7   | Password Generator App |
+| 8   | IP Address Tracker |
+| 9   | Clock App |
+| 10  | Calculator App |
+| 11  | Pomodoro App |
+| 12  | Age Calculator |
+| 13  | Tips Calculator |
+| 14  | Music Player Component |
+| 15  | Text to Speech Component |
+| 16  | Image Uploader Component |
+| 17  | Alarado Landing Page |
+| 18  | Hufie Landing Page |
+| 19  | Manage Landing Page |
+| 20  | Space Tourism Multipage |
+| 21  | Weather Landing Page |
+| 22  | Maker Launch Landing Page |
+| 23  | Fylo Landing Page |
+| 24  | Huddle Landing Page |
+| 25  | Ping Launch Page |
+| 26  | Recipe Page |
+| 27  | FAQ Page |
+| 28  | Contact Page |
+| 29  | Article Listing Component |
+| 30  | Feature Section Component |
+| 31  | Product Listing Component |
+| 32  | Pricing Table Component |
+| 33  | Bento Box Component |
+| 34  | Subscription Checkout Component |
+| 35  | Chat App Illustration |
+| 36  | Newsletter Component |
+| 37  | Card Feature Component |
+| 38  | Data Storage Component |
+| 39  | Bank Card Component |
+| 40  | Pricing Component |
+| 41  | Testimonial Component |
+| 42  | Rating Card Component |
+| 43  | Social Links Component |
+| 44  | Social Proof Component |
 
 
 
