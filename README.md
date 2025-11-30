@@ -1,4 +1,4 @@
-# Project Vanilla: 
+# Basics: 
 
 This repository is my playground for experimenting with the core building blocks of the web - HTML, CSS, and Vanilla JavaScript.
 
