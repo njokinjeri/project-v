@@ -221,13 +221,11 @@ h1 {
     background-size: 100% 50%;
     background-position: bottom center;
     z-index: -1;
-
 }
 
 .conversation-feature {
     padding: 2rem 0;
 }
-
 
 .feature-image {
     width: 50vw;
