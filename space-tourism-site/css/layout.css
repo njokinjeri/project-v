@@ -13,6 +13,7 @@ header {
 
 nav {
   position: relative;
+  z-index: 10;
 }
 
 /* Mobile hamburger */
@@ -74,6 +75,7 @@ nav ul {
   gap: 1.875rem;
   list-style: none;
   padding-top: 10rem;
+  padding-left: 2rem;
   opacity: 0;
   transform: translateX(100%);
   transition: opacity 0.5s, transform 0.5s;
