@@ -35,20 +35,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
     background-color: var(--cta-action-background);
 }
 
 .header-logo {
-    width: 9.5rem;
-    padding: 2rem 2rem;
+    width: 12rem;
+    padding: 4rem 2rem;
 }
 
 .nav-list {
-    padding-right: 1.5rem;
+    padding-right: 3rem;
     display: flex;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .nav-list li {
@@ -109,7 +108,7 @@ main {
 
 .figure-hero {
     width: 100vw;
-    min-height: 40vh;
+    height: 40vh;
     background-color: var(--cta-action-background);
     display: flex;
     justify-content: center;
@@ -131,7 +130,7 @@ main {
 }
 
 .hero-illustration {
-    width: 85vw;
+    width: 70%;
 }
 
 .btn {
@@ -488,9 +487,6 @@ footer {
 
 
 @media (min-width: 768px) {
-    header {
-        padding: 1rem;
-    }
     .header-logo {
         width: 12rem;
     }
@@ -501,9 +497,10 @@ footer {
     }
     .hero-section {
         width: 40vw;
+        min-height: 20rem;
     }
     .hero-illustration {
-        width: 55%;
+        width: 40rem;
     }
     .hero-content h1 {
         width: 40.625rem;
@@ -512,6 +509,11 @@ footer {
         width: 35rem;
         font-weight: 500;
     }
+
+    .figure-hero {
+        height: 33rem;
+    }
+
     .figure-hero::after {
         content: "";
         position: absolute;
@@ -684,6 +686,7 @@ footer {
     .hero-illustration {
         width: 45rem;
     }
+
     .figure-hero::after {
         content: "";
         position: absolute;
