@@ -28,20 +28,6 @@ body {
     cursor: pointer;
 }
 
-/* page header styling*/
-.page-header {
-    height: 10vh;
-    display: flex;
-    font-size: var(--font-size-large);
-    text-align: center;
-}
-
-.source-code {
-    text-decoration: none;
-    color: var(--Grey);
-    align-self: flex-end;
-}
-
 /* main element styling*/
 
 main {
