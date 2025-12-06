@@ -9,43 +9,38 @@
 
 </head>
 <body>
-  <header>
-    <a class="source-code" href="" target="_blank">&#60;&#8725;&#62;</a>
-  </header>
   <main>
-    <section class="logo-container">
-      <img class="flyo-logo" src="./images/logo.svg" alt="Flyo-logo" />
-      <div class="icon-container">
-        <div class="icon-row document">
-          <img src="./images/icon-document.svg" alt="document-icon" />
+    <section>
+      <section class="logo-container">
+        <img class="flyo-logo" src="./images/logo.svg" alt="Flyo-logo" />
+        <div class="icon-container">
+          <div class="icon-row document">
+            <img src="./images/icon-document.svg" alt="document-icon" />
+          </div>
+          <div class="icon-row folder">
+            <img src="./images/icon-folder.svg" alt="folder-icon" />
+          </div>
+          <div class="icon-row upload">
+            <img src="./images/icon-upload.svg" alt="upload-icon" />
+          </div> 
+        </div>  
+      </section>
+      <section class="data-container">
+        <p>You've used <span>815 GB</span> of your storage</p>
+        <div class="meter-container">
+          <label for="data-usage"></label>
+          <meter id="data-usage" min="0" max="1000" value="815"></meter>
+          <span class="dot"></span>
+          <div class="span-container">
+            <span>0 GB</span>
+            <span>1000 GB</span>
+          </div>
         </div>
-        <div class="icon-row folder">
-          <img src="./images/icon-folder.svg" alt="folder-icon" />
+        <div class="data-left-container">
+          <p>185<span>GB LEFT</span></p>
         </div>
-        <div class="icon-row upload">
-          <img src="./images/icon-upload.svg" alt="upload-icon" />
-        </div> 
-      </div>  
-    </section>
-    <section class="data-container">
-      <p>You've used <span>815 GB</span> of your storage</p>
-      <div class="meter-container">
-        <label for="data-usage"></label>
-        <meter id="data-usage" min="0" max="1000" value="815"></meter>
-        <span class="dot"></span>
-        <div class="span-container">
-          <span>0 GB</span>
-          <span>1000 GB</span>
-        </div>
-      </div>
-      <div class="data-left-container">
-        <p>185<span>GB LEFT</span></p>
-      </div>
+      </section>
     </section>
   </main>
-  <footer>
-    <img class="my-icon" src="./images/dragon-fly.svg" alt="dragon-fly">
-      <p>Made with curiosity</p> 
-  </footer>
 </body>
 </html>
