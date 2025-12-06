@@ -28,9 +28,8 @@ body {
     background-position: bottom center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
     color: var(--white);
 }
 
@@ -255,7 +254,7 @@ footer p:hover {
     }
 
     section {
-        width: 75vw;
+        width: 55rem;
     }
 
     .contact-form {
@@ -273,7 +272,7 @@ footer p:hover {
 
     .form-details input,
     .form-details .custom-select {
-        width: 35vw;
+        width: 25rem;
     }
 
     .cta input {
@@ -282,18 +281,3 @@ footer p:hover {
 
   }
 
-  @media (min-width: 1280px) {
-    section {
-        width: 60vw;
-    }
-
-    .form-details input,
-    .form-details .custom-select {
-        width: 28vw;
-    }
-
-    .cta input {
-        width: 100%;
-    }
-
-  }
