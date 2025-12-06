@@ -205,7 +205,7 @@ h5 {
     display: inline;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     main {
         padding: 1rem;
         display: flex;
@@ -223,13 +223,11 @@ h5 {
         gap: 0.75rem;
     }
 
-   
-
     section {
         width: 40vw;
     }
-}
 
-@media (min-width: 1025px) {
-
+    .product-details {
+        width: 30rem;
+    }
 }
