@@ -190,7 +190,7 @@ main{
     }
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1280px) {
     .header-paragraph {
         width: 40vw;
     }
