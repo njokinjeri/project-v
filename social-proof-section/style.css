@@ -113,7 +113,7 @@ section {
 }
 
 .avatar-container {
-    min-height: 16vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -142,7 +142,7 @@ section {
 
 blockquote {
     color: var(--light-grayish-magenta);
-    font-size: var(--font-size-small);
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.5rem;
     opacity: 0.8;
@@ -168,22 +168,20 @@ blockquote {
         width: 75vw;
     }
     .reviews-container {
-        width: 75vw;
+        width: 40rem;
     }
-    blockquote {
-        font-size: var(--font-size-medium);
-    }
+
 }
 
 @media screen and (min-width: 1200px) {
     main {
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         background-color: var(--very-dark-magenta);
     }
     section {
-        width: 75vw;
-        height: 100%;
+        width: 70rem;
+        height: 50rem;
         background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
         background-position: left top, right bottom;
         background-repeat: no-repeat, no-repeat;
@@ -198,8 +196,6 @@ blockquote {
     .hero-container {
         grid-row: 1;
         grid-column: 1/2;
-        margin-top: 6rem;
-        margin-bottom: -4rem;
     }
 
     .hero-heading {
@@ -227,7 +223,7 @@ blockquote {
     }
 
     .rating-column {
-        width: 28vw;
+        width: 28rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
