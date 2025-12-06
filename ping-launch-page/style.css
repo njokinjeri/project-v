@@ -15,19 +15,23 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
     font-family: "Libre Franklin", sans-serif;
     font-size: var(--font-size-medium);
     color: var(--gray);
     cursor: pointer;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2;
 }
 
 header {
-    margin-top: 4.5rem;
-    padding: 1.25rem;
+    padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +43,8 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 .info-container {
-    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,8 +141,8 @@ input::placeholder {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 80vw;
+    height: 60vh;
+    width: 60vw;
 }
 
 .launch-icon {
@@ -173,10 +177,11 @@ input::placeholder {
 }
 
 .dashboard-container {
-    width: 60%;
-    margin-top: 1.5rem;
-    margin-bottom: 10rem;
+    width: 80%;
+    height: 25rem;
+    object-fit: contain;
 }
+
 footer {
     display: flex;
     flex-direction: column;
@@ -208,11 +213,10 @@ footer {
     text-decoration: none;
 }
 
-
-
 @media screen and (max-width: 600px) {
     .dashboard-container {
-        width: 75%;
+        width: 85%;
+        height: 20rem;
     }
 
     h1 {
@@ -229,7 +233,6 @@ footer {
         padding-top: 1.5rem;
     }
     .info-container p {
-        margin-top: 0;
         margin-bottom: 2rem;
     }
 
