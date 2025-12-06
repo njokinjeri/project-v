@@ -39,7 +39,7 @@ main {
 
 section {
     width: 70vw;
-    height: 70%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +54,7 @@ form {
     width: 62vw;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .form-entry-container {
@@ -72,6 +72,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
+    position: relative;
 }
 
 .entry-column input {
@@ -148,13 +149,36 @@ button:hover {
     animation: blink 5s linear infinite
 }
 
-
-@media (min-width: 769px) {
-
+.error-info {
+    color: var(--light-red);
+    font-style: italic;
+    position: absolute;
+    bottom: -36%;
+    right: 10%;
 }
 
+.entry-column.has-error label {
+    color: var(--light-red); 
+}
 
+.entry-column.has-error input {
+    border-color: var(--light-red); 
+}
 
-@media (min-width: 1025px) {
-
+@media (min-width: 769px) {
+    section {
+        width: 45rem;
+    }
+    form {
+        width: 75%;
+    }
+    .form-entry-container {
+        width: 10rem;
+    }
+    .entry-column input {
+        width: 10.25rem;
+    }
+    .error-info {
+        bottom: -20%;
+    }
 }

@@ -30,26 +30,55 @@ function calculateAge(e) {
 function validateInputs(day, month, year) {
     let valid = true;
 
-    if (isNaN(day) || day < 1 || day > 31) {
-        showError(errorInputDay, 'Must be a valid date')
+    if (isNaN(day)) {
+        showError(birthDayInput, errorInputDay, 'This field is required');
+        valid = false
+    } else if (day < 1 || day > 31) {
+        showError(birthDayInput, errorInputDay, 'Must be a valid date')
         valid = false;
     } else {
-        clearError(errorInputDay)
+        clearError(birthDayInput, errorInputDay)
     }
     
-    if (isNaN(month) || month < 1 || month > 12) {
-        showError(errorInputMonth, 'Must be a valid month')
+  if (isNaN(month)) {
+        showError(birthMonthInput, errorInputMonth, 'This field is required');
+        valid = false
+    } else if (month < 1 || month > 12) {
+        showError(birthMonthInput, errorInputMonth, 'Must be a valid month')
         valid = false;
     } else {
-        clearError(errorInputMonth)
+        clearError(birthMonthInput, errorInputMonth)
     }
 
-    if (isNaN(year) || year < 1) {
-        showError(errorInputYear, 'Must be a valid year')
+  if (isNaN(year)) {
+        showError(birthYearInput, errorInputYear, 'This field is required');
+        valid = false
+    } else if (year < 1 ) {
+        showError(birthYearInput, errorInputYear, 'Must be a valid year')
         valid = false;
     } else {
-        clearError(errorInputYear)
+        clearError(birthYearInput, errorInputYear)
     }
+
+    if (valid) {
+        const daysInMonth = new Date(year, month, 0).getDate();
+        if (day > daysInMonth) {
+            showError(errorInputDay, 'Must be a valid date');
+            valid = false;
+        }
+    }
+
+    if (valid) {
+        const birthDate = new Date(year, month - 1, day);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (birthDate > today) {
+            showError(errorInputYear, 'Must be in the past');
+            valid = false;
+        }
+    }
+
 
     return valid;
 }
@@ -83,12 +112,16 @@ function displayAge(age) {
 
 }
 
-function showError(element, message) {
-    element.textContent = message;
+function showError(inputElement, errorElement, message) {
+    errorElement.textContent = message;
+
+    inputElement.closest('.entry-column').classList.add('has-error');
 }
 
-function clearError(element) {
-    element.textContent = '';
+function clearError(inputElement, errorElement) {
+    errorElement.textContent = '';
+
+    inputElement.closest('.entry-column').classList.remove('has-error');
 }
 
 form.addEventListener("submit", calculateAge);
